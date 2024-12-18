@@ -4,37 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="styles/style..css" rel="stylesheet">
+
+    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    
+
+    <link href="styles/style.css" rel="stylesheet">
     <title>Nexus</title>
 </head>
 <body>
-    <nav class="flex items-center justify-between flex-wrap bg-white p-6">
+    <nav class="flex items-center justify-between flex-wrap bg-white p-6 px-20">
         <div class="flex items-center flex-shrink-0 text-white mr-6">
           <img src="assets/images/Nexus.svg" alt="Nexus Logo">
         </div>
         <div class="block lg:hidden">
-          <button id="menu-button" class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
-            <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+          <button id="menu-button" class="flex items-center px-3 py-2 border rounded text-teal-500 border-teal-500 hover:text-teal-700 hover:border-teal-700">
+            <svg class="fill-current h-4 w-4" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
           </button>
         </div>
-        <div id="menu-items" class="w-full block flex-grow lg:flex lg:items-center lg:w-auto hidden sm:visible">
-          <div class="text-sm lg:flex-grow">
-            <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-[#1E1E1E] hover:text-[#607D8B] mr-4">
-              Home
-            </a>
-            <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-[#1E1E1E]  hover:text-[#607D8B] mr-4">
-              Sobre
-            </a>
-            <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-[#1E1E1E]  hover:text-[#607D8B] mr-4">
-              Mural de pedidos
-            </a>
-            <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-[#1E1E1E]hover:text-white">
-              Mapa
-            </a>
-          </div>
+        <div class="hidden lg:flex lg:items-center lg:space-x-4">
+          <a href="#responsive-header" class="text-[#1E1E1E] hover:text-[#607D8B]">Home</a>
+          <a href="#responsive-header" class="text-[#1E1E1E] hover:text-[#607D8B]">Sobre</a>
+          <a href="#responsive-header" class="text-[#1E1E1E] hover:text-[#607D8B]">Mural de pedidos</a>
+          <a href="#responsive-header" class="text-[#1E1E1E] hover:text-[#607D8B]">Mapa</a>
         </div>
-      </nav>
-      
-      <script src="scripts/main.js"></script>
+        <div class="flex space-x-4 my-auto lg:block hidden">
+          <!-- Botão branco com texto azul -->
+          <button class="bg-white text-blue-500 font-bold py-2 px-4 rounded border border-[#006BB1] hover:bg-blue-50">
+            Criar conta
+          </button>
+          <!-- Botão azul com texto branco -->
+          <button class="bg-[#1FA4E4] text-white font-bold py-2 px-4 rounded hover:bg-[#006BB1]">
+            Entrar
+          </button>
+        </div>
+    </nav>
+
+    <!-- Modal para o menu -->
+    <div id="menu-modal" class="fixed inset-0 flex justify-start bg-black bg-opacity-50 hidden z-50">
+      <div class="bg-white w-64 h-full p-6 shadow-lg transform -translate-x-full transition-transform duration-300" id="modal-content">
+        <div class="flex justify-between items-center mb-4">
+          <h2 class="text-lg font-bold">Menu</h2>
+          <button id="close-menu" class="text-gray-500 hover:text-gray-700">
+            <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <div class="flex flex-col space-y-4">
+          <a href="#home" class="text-[#1E1E1E] hover:text-[#607D8B]">Home</a>
+          <a href="#sobre" class="text-[#1E1E1E] hover:text-[#607D8B]">Sobre</a>
+          <a href="#mural" class="text-[#1E1E1E] hover:text-[#607D8B]">Mural de pedidos</a>
+          <a href="#mapa" class="text-[#1E1E1E] hover:text-[#607D8B]">Mapa</a>
+        </div>
+      </div>
+    </div>
+
+    <script src="scripts/main.js"></script>
 </body>
 </html>
