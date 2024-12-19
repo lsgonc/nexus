@@ -18,7 +18,7 @@
   </head>
   <body>
     <nav class="flex items-center justify-between flex-wrap bg-white p-6 px-20">
-      <div class="flex items-center flex-shrink-0 text-white mr-6">
+      <div class="flex items-center lg:w-auto w-1/2 flex-shrink-0 text-white mr-6">
         <img src="assets/images/Nexus.svg" alt="Nexus Logo" />
       </div>
       <div class="block lg:hidden">
@@ -130,10 +130,10 @@
       <div class="absolute inset-0 bg-black opacity-50"></div>
       <!-- Camada escura para destacar o texto -->
       <div
-        class="relative px-20 z-10 flex flex-col justify-between w-full h-full text-start text-white"
+        class="relative px-20 z-10 flex flex-col justify-between w-full h-full lg:text-start text-center text-white"
       >
         <div class="my-auto">
-          <h2 class="text-6xl font-bold mb-12">
+          <h2 class="lg:text-6xl text-2xl font-bold mb-12">
             Criamos união em <br />
             momentos de necessidade
           </h2>
@@ -146,23 +146,23 @@
         </div>
 
         <div class="flex w-full items-center mt-10 mb-8">
-          <p class="text-lg">238 pessoas ajudadas</p>
+          <p class="lg:text-lg text-sm">238 pessoas ajudadas</p>
 
           <!-- Linha branca horizontal no meio -->
           <div class="border-t-2 border-white w-full mx-8"></div>
 
           <!-- Texto à direita -->
-          <p class="text-lg">58 doações recebidas</p>
+          <p class="lg:text-lg text-md">58 doações recebidas</p>
         </div>
       </div>
     </section>
 
     <section
       id="about"
-      class="flex flex-col lg:flex-row items-center justify-between px-20 py-12 bg-gray-100"
+      class="flex flex-col lg:flex-row items-center justify-between lg:px-20 px-4 py-12 bg-gray-100"
     >
       <!-- Texto à Esquerda -->
-      <div class="w-1/2">
+      <div class="lg:w-1/2">
         <div class="flex items-center">
           <h3 class="text-md w-auto text-nowrap text-[#1FA4E4]">CONHEÇA NOSSO PROPÓSITO</h3>
           <div class="border-t-2 border-[#1FA4E4] w-full mx-8"></div>
@@ -189,7 +189,7 @@
       </div>
 
       <!-- Imagem à Direita -->
-      <div style="width: 450px; height: 600px">
+      <div style="width: 450px; height: 600px" class="lg:block hidden">
         <img
           src="assets/images/img-sobre.png"
           alt="Dois idosos se abraçando"
@@ -200,7 +200,7 @@
 
     <section
       id="tutorial"
-      class="flex flex-col lg:flex-row items-center justify-between px-20 py-12 bg-gray-100"
+      class="flex flex-col lg:flex-row items-center justify-between lg:px-20 px-4 py-12 bg-gray-100"
     >
       <!-- Texto à Esquerda -->
       <div class="flex flex-col w-full">
@@ -219,10 +219,10 @@
         </p>
 
         <!-- Cards -->
-        <div class="flex lg:flex-row flex-col mt-10 gap-x-6 gap-y-6">
+        <div class="flex md:flex-row flex-col mt-10 gap-x-6 gap-y-6">
           <!-- Card 1 -->
           <div style="height: 400px;"
-            class="flex flex-col justify-center items-start bg-#[F3FBFF] py-6 px-16 rounded-lg border-2 border-[#1FA4E4] w-full sm:w-1/3"
+            class="flex flex-col justify-center lg:items-start items-center bg-#[F3FBFF] py-6 lg:px-16 px-4 rounded-lg border-2 border-[#1FA4E4] md:w-1/3 w-full"
           >
             <svg
               class="h-12 w-12 text-[#1FA4E4] mb-4"
@@ -246,7 +246,7 @@
 
           <!-- Card 2 -->
           <div style="height: 400px;"
-            class="flex flex-col justify-center items-start bg-#[F3FBFF] py-6 px-16 rounded-lg border-2 border-[#1FA4E4] w-full sm:w-1/3"
+            class="flex flex-col justify-center lg:items-start items-center bg-#[F3FBFF] py-6 lg:px-16 px-4 rounded-lg border-2 border-[#1FA4E4] md:w-1/3 w-full"
           >
             <svg
               class="h-12 w-12 text-[#1FA4E4] mb-4"
@@ -270,7 +270,7 @@
 
           <!-- Card 3 -->
           <div style="height: 400px;"
-            class="flex flex-col justify-center items-start bg-#[F3FBFF] py-6 px-16 rounded-lg border-2 border-[#1FA4E4] w-full sm:w-1/3"
+            class="flex flex-col justify-center lg:items-start items-center bg-#[F3FBFF] py-6 lg:px-16 px-4 rounded-lg border-2 border-[#1FA4E4] md:w-1/3 w-full"
           >
             <svg
               class="h-12 w-12 text-[#1FA4E4] mb-4"
@@ -296,11 +296,11 @@
 
     <section
       id="partner"
-      class="flex flex-col lg:flex-row items-center justify-between px-20 py-12 bg-gray-100"
+      class="flex flex-col lg:flex-row items-center justify-between lg:px-20 px-4 py-12 bg-gray-100"
     >
       <!-- Texto à Esquerda -->
-      <div class="w-1/2">
-        <div class="flex items-center">
+      <div class="lg:w-1/2 w-full">
+        <div class="flex lg:flex-row items-center">
           <h3 class="text-md w-auto text-nowrap text-[#1FA4E4]">COMO CONTRIBUIR</h3>
           <div class="border-t-2 border-[#1FA4E4] w-full mx-8"></div>
         </div>
@@ -320,17 +320,17 @@
       </div>
 
       <!-- Imagem à Direita -->
-      <div style="width: 450px; height: 600px">
+      <div style="width: 450px; height: 600px" class="lg:block hidden">
         <img
           src="assets/images/partner-img.png"
           alt="Voluntários organizando copos"
-          class="lg:w-full lg:h-auto mx-auto mt-6 w-1/2 h-1/2 self-center object-cover rounded-lg"
+          class="lg:w-full  lg:h-auto mx-auto mt-6 w-1/2 h-1/2 self-center object-cover rounded-lg"
         />
       </div>
     </section>
 
     <footer class="bg-black text-white py-12">
-      <div class="container px-20 text-[#D4D4D4]">
+      <div class="container lg:px-20 px-4 text-[#D4D4D4]">
         <!-- Primeira Seção: Logo e Informações -->
         <div class="grid md:grid-cols-3 gap-12">
           <div class="text-center md:text-left">
@@ -368,11 +368,11 @@
     
       </div>
     
-      <div class="container mt-8 text-center px-20">
+      <div class="container mt-8 text-center lg:px-20">
         <div class="border-t-2 border-[#D4D4D4] w-full"></div>
         
         <div class="flex justify-between mt-4 items-center">
-        <div class="flex gap-3">
+        <div class="flex gap-3 px-4">
         <a href="#" class="w-12 h-12 bg-white rounded-full flex items-center justify-center hover:bg-gray-200">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 text-black">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v12h4V14h3l1-4h-4V7a1 1 0 0 1 1-1h3V2z"/>
