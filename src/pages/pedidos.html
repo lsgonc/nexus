@@ -47,10 +47,10 @@
         <a href="" class="text-[#1E1E1E] hover:text-[#607D8B]"
           >Sobre</a
         >
-        <a href="/src/pages/mural.html" class="text-[#1E1E1E] hover:text-[#607D8B]"
+        <a href="#responsive-header" class="text-[#1E1E1E] hover:text-[#607D8B]"
           >Mural de pedidos</a
         >
-        <a href="#mapa" class="text-[#1E1E1E] hover:text-[#607D8B]"
+        <a href="#responsive-header" class="text-[#1E1E1E] hover:text-[#607D8B]"
           >Mapa</a
         >
       </div>
@@ -59,14 +59,14 @@
         <button
           class="bg-white text-blue-500 font-bold py-2 px-4 rounded border border-[#006BB1] hover:bg-blue-50"
         >
-          <a href="/src/pages/cadastro.html">Criar conta</a>
+          <a href="pages/cadastro.html">Criar conta</a>
          
         </button>
         <!-- Botão azul com texto branco -->
         <button 
           class="bg-[#1FA4E4] text-white font-bold py-2 px-4 rounded hover:bg-[#006BB1]"
         >
-          <a href="/src/pages/login.html">Entrar</a>
+          <a href="pages/login.html">Entrar</a>
         </button>
       </div>
     </nav>
@@ -125,234 +125,151 @@
       </div>
     </div>
 
-    <section
-      id="sobre-nos"
-      class="flex flex-col items-center justify-between mt-10 mb-28"
-    >   
-        <div class="flex flex-col items-center w-1/2">
-        <h3 class="text-md w-auto text-nowrap text-[#1FA4E4]">SOBRE NÓS</h3>
 
-        <h2 class="md:text-5xl text-4xl font-bold my-6">
-            Juntos somos mais fortes
+    <section
+      id="about"
+      class="flex flex-col lg:flex-row gap-14 lg:px-20 px-4 py-12 bg-gray-100"
+    >
+
+   
+    <div class="lg:block hidden">
+        <img
+          src="../assets/images/pedido-1.png"
+          alt="Moradores em situação de rua"
+          class=""
+        />
+      </div>
+
+     
+      <div class="lg:w-1/2 flex flex-col justify-between">
+       
+        <h2 class="text-4xl font-bold mb-4 ">
+            Sem abrigo
         </h2>
-        <p class="text-lg md:text-start text-justify ">
-            Começamos como uma pequena iniciativa, mas com o tempo, vimos nossa comunidade crescer e nossa missão se fortalecer. Hoje, o Nexus é um movimento que mobiliza milhares de pessoas em todo o mundo.
+        <p class="text-lg md:text-start text-justify mb-4">
+            Estamos desabrigados por conta dos alagamentos e fortes chuvas que estão acontecendo na área. Perdemos todos os pertences e as casas estão cheias de água. Estamos aceitando toda oportunidade de abrigo e doações de roupas. Precisamos de ajuda urgente! 
         </p>
-    </div>
+
+        <div class="flex flex-col">
+            <h2 class="text-xl font-bold mb-1">
+                Local
+            </h2>
+            <p class="text-lg md:text-start text-justify mb-4">
+                1450 1ST AVE NEW YORK NY
+            </p>
+        </div>
+
+        <div class="flex justify-between mb-4">
+            <div class="flex flex-col">
+                <h2 class="text-xl font-bold mb-1">
+                    Nome
+                </h2>
+                <p class="text-lg md:text-start text-justify mb-4">
+                    Andrew Becker
+                </p>
+            </div>
+            <div class="flex flex-col">
+                <h2 class="text-xl font-bold mb-1">
+                    Email
+                </h2>
+                <p class="text-lg md:text-start text-justify mb-4">
+                    andrew.b@gmail.com
+                </p>
+            </div>
+        </div>
+
+        <div class="flex justify-between">
+            <div class="flex flex-col">
+                <h2 class="text-xl font-bold mb-1">
+                    Telefone
+                </h2>
+                <p class="text-lg md:text-start text-justify mb-4">
+                    +55 11 972010692
+                </p>
+            </div>
+            <div class="flex flex-col">
+                <h2 class="text-xl font-bold mb-1">
+                    Pessoas afetadas
+                </h2>
+                <p class="text-lg md:text-start text-justify mb-4">
+                    9
+                </p>
+            </div>
+        </div>
+
+        <div class="flex gap-6">
+            <button
+            class="bg-[#1FA4E4] text-white font-bold mt-10 py-4 md:px-24 px-4 rounded hover:bg-[#006BB1]"
+            >
+            Quero ajudar
+            </button>
+
+            <button
+            class="bg-white text-[#1FA4E4] border border-[#1FA4E4] font-bold mt-10 py-4 md:px-24 px-4 rounded hover:bg-blue-50"
+            >
+            Conheça o autor
+            </button>
+        </div>
+      </div>
+
+      
     </section>
 
-    <section
-  class="relative w-full bg-cover bg-center mb-28"
-  style="
-    background-image: url('../assets/images/sobre-img.png');
-    height: 600px;
-  "
->
-  <div class="absolute inset-0 bg-black opacity-50"></div>
-  <!-- Camada escura para destacar o texto -->
-  <div
-    class="relative px-20 z-10 flex flex-col justify-between w-full h-full lg:text-start text-center text-white"
-  >
-    <!-- Swiper Container -->
-    <div class="swiper mySwiper w-full h-full">
-      <!-- Swiper Wrapper -->
-      <div class="swiper-wrapper flex items-center">
+    <h2 class="text-4xl px-20 font-bold my-14">Outros pedidos próximos</h2>
+
+    <div class="flex md:flex-row flex-col mt-10 px-20 gap-24 mb-16">
         <!-- Card 1 -->
-        <div
-          class="swiper-slide backdrop-blur-md backdrop-brightness-200 flex flex-col justify-center items-center bg-#[F3FBFF] py-6 lg:px-16 px-4 rounded-lg border-2 border-[#1FA4E4]"
-          style="height: 400px;"
+        <div style="height: 400px; background-image: url(../assets/images/mural-1.png); background-size: 100% 100%;"
+          class="bg-#[F3FBFF] rounded-lg md:w-1/3 w-full relative flex flex-col justify-end"
         >
-          <h4 class="text-8xl font-bold text-white mb-2">230</h4>
-          <p class="text-white text-2xl text-[#1E1E1E]">
-            Pessoas já foram impactadas por nossa ajuda
-          </p>
+            <div class="flex gap-3 px-8 items-stretch">
+                <div class="bg-white rounded-lg shadow-md p-4 w-3/4 z-10 mb-12">
+                    <h3 class="text-lg font-semibold">Estamos sem água</h3>
+                    <p class="text-sm text-gray-600">Karachi, Sindh, Pakistan</p>
+                    <p class="text-sm text-gray-600">27 pessoas</p>
+                </div>
+
+                <div class="rounded-lg flex mb-12 z-10">
+                    <img src="../assets/images/sobre-water-icon.png" alt="Pingo de agua">
+                </div>
+            </div>
         </div>
 
         <!-- Card 2 -->
-        <div
-          class="swiper-slide backdrop-blur-md backdrop-brightness-200 flex flex-col justify-center items-center bg-#[F3FBFF] py-6 lg:px-16 px-4 rounded-lg border-2 border-[#1FA4E4]"
-          style="height: 400px;"
+        <div style="height: 400px; background-image: url(../assets/images/mural-2.png); background-size: 100% 100%"
+          class="bg-#[F3FBFF] rounded-lg  md:w-1/3 w-full flex flex-col justify-end"
         >
-          <h4 class="text-8xl font-bold text-white mb-2">58</h4>
-          <p class="text-white text-2xl text-[#1E1E1E]">
-            Doações recebidas e contribuiram com a causa
-          </p>
+            <div class="flex gap-3 px-8 items-stretch">
+                <div class="bg-white rounded-lg shadow-md p-4 w-3/4 z-10 mb-12">
+                    <h3 class="text-lg font-semibold">Sem abrigo</h3>
+                    <p class="text-sm text-gray-600">1450 1ST AVE NEW YORK NY</p>
+                    <p class="text-sm text-gray-600">9 pessoas</p>
+                </div>
+
+                <div class="rounded-lg flex mb-12 z-10">
+                    <img src="../assets/images/mural-house-icon.png" alt="Pingo de agua">
+                </div>
+            </div>
         </div>
 
         <!-- Card 3 -->
-        <div
-          class="swiper-slide backdrop-blur-md backdrop-brightness-200 flex flex-col justify-center items-center bg-#[F3FBFF] py-6 lg:px-16 px-4 rounded-lg border-2 border-[#1FA4E4]"
-          style="height: 400px;"
+        <div style="height: 400px; background-image: url(../assets/images/mural-3.png); background-size: 100% 100%"
+          class="bg-#[F3FBFF] rounded-lg  md:w-1/3 w-full flex flex-col justify-end"
         >
-          <h4 class="text-8xl font-bold text-white mb-2">1379</h4>
-          <p class="text-white text-2xl text-[#1E1E1E]">
-            Voluntários já fazem parte da nossa equipe
-          </p>
+            <div class="flex gap-3 px-8 items-stretch">
+                <div class="bg-white rounded-lg shadow-md p-4 w-3/4 z-10 mb-12">
+                    <h3 class="text-lg font-semibold">Falta de alimentos</h3>
+                    <p class="text-sm text-gray-600">Rua Salomão, 316 - São Paulo, SP - Brasil</p>
+                    <p class="text-sm text-gray-600">12 pessoas</p>
+                </div>
+
+                <div class="rounded-lg flex mb-12 z-10">
+                    <img src="../assets/images/mural-fork-icon.png" alt="Pingo de agua">
+                </div>
+            </div>
         </div>
-      </div>
-
-      <!-- Swiper Pagination -->
-      <div class="swiper-pagination"></div>
-
-      <!-- Swiper Navigation (opcional) -->
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
     </div>
-  </div>
-</section>
-
-
-    <section
-      id="nossa-historia"
-      class="flex flex-col items-center justify-between mt-10"
-    >   
-        <div class="flex flex-col items-center w-1/2">
-        <h3 class="text-md w-auto text-nowrap text-[#1FA4E4]">NOSSA HISTÓRIA</h3>
-
-        <h2 class="text-5xl font-bold my-6">
-            Nosso começo
-        </h2>
-        <p class="text-lg md:text-start text-justify mb-4">
-            A história do Nexus começou com um grupo de amigos que se uniu para ajudar as vítimas de um terremoto devastador. Eles perceberam que a falta de comunicação e coordenação dificultava o acesso da ajuda às pessoas que mais precisavam. A partir dessa experiência, decidiram criar uma plataforma que permitisse que voluntários e organizações se conectassem diretamente com as comunidades afetadas.        </p>
-    
-        <p class="text-lg md:text-start text-justify mb-4">O Nexus rapidamente se tornou um ponto de encontro para pessoas de todo o mundo que queriam fazer a diferença. Voluntários de diferentes origens e habilidades se inscreveram para oferecer sua ajuda, enquanto comunidades afetadas por desastres encontraram apoio e recursos para se reconstruir.</p>
-        <p class="text-lg md:text-start text-justify mb-4">A plataforma cresceu rapidamente, expandindo sua atuação para outros tipos de desastres e abrangendo uma área geográfica cada vez maior. Hoje, o Nexus é uma comunidade global de mais de 1000 voluntários e 27 organizações parceiras, que juntos têm ajudado a reconstruir comunidades em mais de 10 países.</p>
-        <p class="text-lg md:text-start text-justify mb-4">A história do Nexus é uma história de esperança, solidariedade e impacto. É a história de pessoas comuns que se uniram para fazer a diferença, mostrando que mesmo diante da adversidade, é possível construir um mundo melhor.</p>
-        </div>
  
-    </section>
-
-    <section
-      id="valores"
-      class="flex flex-col items-center justify-between mt-10 mb-28"
-    >
-      <div class="flex flex-col items-center w-1/2">
-        <h3 class="text-md w-auto text-nowrap text-[#1FA4E4]">VALORES</h3>
-
-        <h2 class="md:text-5xl text-4xl text-center font-bold my-6">
-          Uma grande equipe com um objetivo muito maior
-        </h2>
-
-        <div class="flex lg:flex-row flex-col gap-8 mt-10">
-          <!-- Valor 1 -->
-          <div class="flex gap-4">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="100"
-              height="40"
-              viewBox="0 0 54 54"
-              fill="none"
-            >
-              <rect width="54" height="54" rx="12" fill="#1FA4E4" />
-            </svg>
-            <div>
-              <h3 class="text-lg font-bold mb-2">Solidariedade</h3>
-              <p>
-                No Nexus, acreditamos que a solidariedade é a base de uma sociedade mais justa e igualitária
-              </p>
-            </div>
-          </div>
-
-          <!-- Valor 2 -->
-          <div class="flex gap-4">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="100"
-              height="40"
-              viewBox="0 0 54 54"
-              fill="none"
-            >
-              <rect width="54" height="54" rx="12" fill="#1FA4E4" />
-            </svg>
-            <div>
-              <h3 class="text-lg font-bold mb-2">Esperança</h3>
-              <p>
-                Procuramos oferecer esperança aos que mais precisam, mostrando que é possível superar desafios
-              </p>
-            </div>
-          </div>
-
-          <!-- Valor 3 -->
-          <div class="flex gap-4">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="100"
-              height="40"
-              viewBox="0 0 54 54"
-              fill="none"
-            >
-              <rect width="54" height="54" rx="12" fill="#1FA4E4" />
-            </svg>
-            <div>
-              <h3 class="text-lg font-bold mb-2">Empatia</h3>
-              <p>
-                A empatia é a chave para entender as necessidades das pessoas afetadas por desastres
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="flex lg:flex-row flex-col gap-8 mt-12">
-          <!-- Valor 1 -->
-          <div class="flex gap-4">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="100"
-              height="40"
-              viewBox="0 0 54 54"
-              fill="none"
-            >
-              <rect width="54" height="54" rx="12" fill="#1FA4E4" />
-            </svg>
-            <div>
-              <h3 class="text-lg font-bold mb-2">Resiliência</h3>
-              <p>
-                No Nexus, celebramos a força e a determinação das pessoas que enfrentam situações difíceis
-              </p>
-            </div>
-          </div>
-
-          <!-- Valor 2 -->
-          <div class="flex gap-4">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="100"
-              height="40"
-              viewBox="0 0 54 54"
-              fill="none"
-            >
-              <rect width="54" height="54" rx="12" fill="#1FA4E4" />
-            </svg>
-            <div>
-              <h3 class="text-lg font-bold mb-2">Cooperação</h3>
-              <p>
-                A cooperação é fundamental para alcançarmos resultados significativos
-              </p>
-            </div>
-          </div>
-
-          <!-- Valor 3 -->
-          <div class="flex gap-4">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="100"
-              height="40"
-              viewBox="0 0 54 54"
-              fill="none"
-            >
-              <rect width="54" height="54" rx="12" fill="#1FA4E4" />
-            </svg>
-            <div>
-              <h3 class="text-lg font-bold mb-2">Inovação</h3>
-              <p>
-                Buscamos por novas tecnologias para atender às necessidades das comunidades afetadas
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-
 
     <footer class="bg-black text-white py-12">
       <div class="w-full lg:px-20 px-4 text-[#D4D4D4]">
