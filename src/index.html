@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="styles/style.css" rel="stylesheet" />
+    <title>Nexus</title>
+  </head>
+  <body>
+    <nav class="flex items-center justify-between flex-wrap bg-white p-6 px-20">
+      <div class="flex items-center lg:w-auto w-1/2 flex-shrink-0 text-white mr-6">
+        <img src="assets/images/Nexus.svg" alt="Nexus Logo" />
+      </div>
+      <div class="block lg:hidden">
+        <button
+          id="menu-button"
+          class="h-full flex items-center px-3 py-2 border rounded text-teal-500 border-teal-500 hover:text-teal-700 hover:border-teal-700"
+        >
+          <svg
+            class="fill-current h-4 w-4"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>Menu</title>
+            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+          </svg>
+        </button>
+      </div>
+      <div class="hidden lg:flex lg:items-center lg:space-x-4">
+        <a href="#responsive-header" class="text-[#1E1E1E] hover:text-[#607D8B]"
+          >Home</a
+        >
+        <a href="#responsive-header" class="text-[#1E1E1E] hover:text-[#607D8B]"
+          >Sobre</a
+        >
+        <a href="#responsive-header" class="text-[#1E1E1E] hover:text-[#607D8B]"
+          >Mural de pedidos</a
+        >
+        <a href="#responsive-header" class="text-[#1E1E1E] hover:text-[#607D8B]"
+          >Mapa</a
+        >
+      </div>
+      <div class="flex space-x-4 my-auto lg:block hidden">
+        <!-- Botão branco com texto azul -->
+        <button
+          class="bg-white text-blue-500 font-bold py-2 px-4 rounded border border-[#006BB1] hover:bg-blue-50"
+        >
+          Criar conta
+        </button>
+        <!-- Botão azul com texto branco -->
+        <button
+          class="bg-[#1FA4E4] text-white font-bold py-2 px-4 rounded hover:bg-[#006BB1]"
+        >
+          Entrar
+        </button>
+      </div>
+    </nav>
+
+    <!-- Modal para o menu -->
+    <div
+      id="menu-modal"
+      class="fixed inset-0 flex justify-start bg-black bg-opacity-50 hidden z-50"
+    >
+      <div
+        class="bg-white w-64 h-full p-6 shadow-lg transform -translate-x-full transition-transform duration-300"
+        id="modal-content"
+      >
+        <div class="flex justify-between items-center mb-4">
+          <h2 class="text-lg font-bold">Menu</h2>
+          <button id="close-menu" class="text-gray-500 hover:text-gray-700">
+            <svg
+              class="h-5 w-5"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="flex flex-col space-y-4">
+          <a href="#home" class="text-[#1E1E1E] hover:text-[#607D8B]">Home</a>
+          <a href="#sobre" class="text-[#1E1E1E] hover:text-[#607D8B]">Sobre</a>
+          <a href="#mural" class="text-[#1E1E1E] hover:text-[#607D8B]"
+            >Mural de pedidos</a
+          >
+          <a href="#mapa" class="text-[#1E1E1E] hover:text-[#607D8B]">Mapa</a>
+
+          <div class="flex space-x-4 my-auto lg:block">
+            <!-- Botão branco com texto azul -->
+            <button
+              class="bg-white text-blue-500 font-bold py-2 px-2 rounded border border-[#006BB1] hover:bg-blue-50"
+            >
+              Criar conta
+            </button>
+            <!-- Botão azul com texto branco -->
+            <button
+              class="bg-[#1FA4E4] text-white font-bold py-2 px-2 rounded hover:bg-[#006BB1]"
+            >
+              Entrar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section
+      class="relative w-full bg-cover bg-center"
+      style="
+        background-image: url('assets/images/header-bg.png');
+        height: 600px;
+      "
+    >
+      <div class="absolute inset-0 bg-black opacity-50"></div>
+      <!-- Camada escura para destacar o texto -->
+      <div
+        class="relative px-20 z-10 flex flex-col justify-between w-full h-full lg:text-start text-center text-white"
+      >
+        <div class="my-auto">
+          <h2 class="lg:text-6xl text-2xl font-bold mb-12">
+            Criamos união em <br />
+            momentos de necessidade
+          </h2>
+          <a
+            href="#link-do-botao"
+            class="bg-white text-[#1E1E1E] font-bold py-3 px-8 rounded hover:bg-[#D9D9D9] transition duration-300"
+          >
+            Clique aqui
+          </a>
+        </div>
+
+        <div class="flex w-full items-center mt-10 mb-8">
+          <p class="lg:text-lg text-sm">238 pessoas ajudadas</p>
+
+          <!-- Linha branca horizontal no meio -->
+          <div class="border-t-2 border-white w-full mx-8"></div>
+
+          <!-- Texto à direita -->
+          <p class="lg:text-lg text-md">58 doações recebidas</p>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="about"
+      class="flex flex-col lg:flex-row items-center justify-between lg:px-20 px-4 py-12 bg-gray-100"
+    >
+      <!-- Texto à Esquerda -->
+      <div class="lg:w-1/2">
+        <div class="flex items-center">
+          <h3 class="text-md w-auto text-nowrap text-[#1FA4E4]">CONHEÇA NOSSO PROPÓSITO</h3>
+          <div class="border-t-2 border-[#1FA4E4] w-full mx-8"></div>
+        </div>
+
+        <h2 class="text-4xl font-bold mb-4 mt-10">
+          QUEREMOS SER A SUA ESPERANÇA
+        </h2>
+        <p class="text-lg md:text-start text-justify mb-4">
+          Em um mundo onde desastres naturais podem abalar nossas vidas, o Nexus
+          surge como um farol de esperança. Somos uma plataforma criada para
+          conectar aqueles que precisam de ajuda com aqueles que querem ajudar.
+        </p>
+        <p class="text-lg">
+          Nossa missão é construir pontes de solidariedade, facilitando a
+          comunicação entre vítimas e voluntários.
+        </p>
+
+        <button
+          class="bg-[#1FA4E4] text-white font-bold mt-10 py-3 px-8 rounded hover:bg-[#006BB1]"
+        >
+          Saiba mais
+        </button>
+      </div>
+
+      <!-- Imagem à Direita -->
+      <div style="width: 450px; height: 600px" class="lg:block hidden">
+        <img
+          src="assets/images/img-sobre.png"
+          alt="Dois idosos se abraçando"
+          class="lg:w-full ms-6 lg:h-auto mx-auto mt-6 w-1/2 h-1/2 self-center object-cover rounded-lg"
+        />
+      </div>
+    </section>
+
+    <section
+      id="tutorial"
+      class="flex flex-col lg:flex-row items-center justify-between lg:px-20 px-4 py-12 bg-gray-100"
+    >
+      <!-- Texto à Esquerda -->
+      <div class="flex flex-col w-full">
+        <div class="flex items-center">
+          <h3 class="w-auto text-nowrap text-md text-[#1FA4E4]">
+            COMO PEDIR AJUDA
+          </h3>
+          <div class="border-t-2 border-[#1FA4E4] w-full mx-8"></div>
+        </div>
+
+        <h2 class="text-4xl font-bold mb-4 mt-10">PRECISO DE APOIO</h2>
+        <p class="text-lg md:text-start text-justify mb-4">
+          Se você é vítima de um desastre natural e precisa de ajuda, nós
+          podemos te ajudar. Neste caso, basta criar um post especificando suas
+          condições e necessidades.
+        </p>
+
+        <!-- Cards -->
+        <div class="flex md:flex-row flex-col mt-10 gap-x-6 gap-y-6">
+          <!-- Card 1 -->
+          <div style="height: 400px;"
+            class="flex flex-col justify-center lg:items-start items-center bg-#[F3FBFF] py-6 lg:px-16 px-4 rounded-lg border-2 border-[#1FA4E4] md:w-1/3 w-full"
+          >
+            <svg
+              class="h-12 w-12 text-[#1FA4E4] mb-4"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="16"></line>
+              <line x1="8" y1="12" x2="16" y2="12"></line>
+            </svg>
+            <h4 class="text-xl font-bold mb-2">Crie sua conta</h4>
+            <p class="text-left text-sm text-[#1E1E1E]">
+              Registre-se para conseguir criar novas publicações e solicitar ajuda para voluntários
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div style="height: 400px;"
+            class="flex flex-col justify-center lg:items-start items-center bg-#[F3FBFF] py-6 lg:px-16 px-4 rounded-lg border-2 border-[#1FA4E4] md:w-1/3 w-full"
+          >
+            <svg
+              class="h-12 w-12 text-[#1FA4E4] mb-4"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="16"></line>
+              <line x1="8" y1="12" x2="16" y2="12"></line>
+            </svg>
+            <h4 class="text-xl font-bold mb-2">Publiique seu pedido</h4>
+            <p class="text-left text-sm text-[#1E1E1E]">
+              Deixe os voluntários sabendo que você está precisando de ajuda
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div style="height: 400px;"
+            class="flex flex-col justify-center lg:items-start items-center bg-#[F3FBFF] py-6 lg:px-16 px-4 rounded-lg border-2 border-[#1FA4E4] md:w-1/3 w-full"
+          >
+            <svg
+              class="h-12 w-12 text-[#1FA4E4] mb-4"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="16"></line>
+              <line x1="8" y1="12" x2="16" y2="12"></line>
+            </svg>
+            <h4 class="text-xl font-bold mb-2">Receba ajuda</h4>
+            <p class="text-left text-sm text-[#1E1E1E]">
+              Assim que um voluntário estiver pronto para ajudar, você será notificado
+            </p>
+          </div>
+      </div>
+    </section>
+
+    <section
+      id="partner"
+      class="flex flex-col lg:flex-row items-center justify-between lg:px-20 px-4 py-12 bg-gray-100"
+    >
+      <!-- Texto à Esquerda -->
+      <div class="lg:w-1/2 w-full">
+        <div class="flex lg:flex-row items-center">
+          <h3 class="text-md w-auto text-nowrap text-[#1FA4E4]">COMO CONTRIBUIR</h3>
+          <div class="border-t-2 border-[#1FA4E4] w-full mx-8"></div>
+        </div>
+
+        <h2 class="text-4xl font-bold mb-4 mt-10">
+          SEJA NOSSO PARCEIRO
+        </h2>
+        <p class="text-lg md:text-start text-justify mb-4">
+          Junte-se a nós e faça a diferença na vida de milhares de pessoas. O Nexus te convida a ser parte de uma rede global de solidariedade. Seja voluntário e ajude a reconstruir comunidades afetadas por desastres naturais. Basta criar uma conta de voluntário e você pode começar a ajudar as pessoas. O mapa te ajuda a verificar quem está próximo de você.
+        </p>
+
+        <button
+          class="bg-[#1FA4E4] text-white font-bold mt-10 py-3 px-8 rounded hover:bg-[#006BB1]"
+        >
+          Ser voluntário
+        </button>
+      </div>
+
+      <!-- Imagem à Direita -->
+      <div style="width: 450px; height: 600px" class="lg:block hidden">
+        <img
+          src="assets/images/partner-img.png"
+          alt="Voluntários organizando copos"
+          class="lg:w-full ms-6 lg:h-auto mx-auto mt-6 w-1/2 h-1/2 self-center object-cover rounded-lg"
+        />
+      </div>
+    </section>
+
+    <footer class="bg-black text-white py-12">
+      <div class="container lg:px-20 px-4 text-[#D4D4D4]">
+        <!-- Primeira Seção: Logo e Informações -->
+        <div class="grid md:grid-cols-3 gap-12">
+          <div class="text-center md:text-left">
+            <h1 class="text-4xl text-white font-bold mb-4">Nexus</h1>
+            <p class="text-md text-[#] mb-4">nexus@gmail.com</p>
+            <p class="text-md text-[#] mb-4">55+ 17 99132-3055</p>
+          </div>
+    
+          <!-- Segunda Seção: Links Rápidos -->
+          <div class="text-center md:text-left">
+            <h3 class="text-2xl text-white font-bold mb-4">Acesso rápido</h3>
+            <ul class="space-y-2">
+              <li><a href="#" class="hover:text-[#1FA4E4]">Home</a></li>
+              <li><a href="#" class="hover:text-[#1FA4E4]">Sobre</a></li>
+              <li><a href="#" class="hover:text-[#1FA4E4]">Mural de Pedidos</a></li>
+              <li><a href="#" class="hover:text-[#1FA4E4]">Mapa</a></li>
+              <li><a href="#" class="hover:text-[#1FA4E4]">Contato</a></li>
+            </ul>
+          </div>
+
+          <!-- Quarta Seção: Newsletter -->
+        <div class="text-left">
+          <h3 class="text-2xl font-semibold mb-4 text-white">Inscreva-se para novidades</h3>
+          <form action="#" method="POST" class="flex">
+            <input type="email" class="border-2 border-[#D4D4D4] ps-2 bg-black w-64 text-white rounded-l-md" placeholder="Seu e-mail" required>
+            <button type="submit" class="bg-white text-black p-3 rounded-r-md hover:bg-[#D4D4D4] transition duration-300">
+              Inscrever-se
+            </button>
+          </form>
+        </div>
+    
+          
+          </div>
+        </div>
+    
+      </div>
+    
+      <div class="container mt-8 text-center lg:px-20">
+        <div class="border-t-2 border-[#D4D4D4] w-full"></div>
+        
+        <div class="flex justify-between mt-4 items-center">
+        <div class="flex gap-3 px-4">
+        <a href="#" class="w-12 h-12 bg-white rounded-full flex items-center justify-center hover:bg-gray-200">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 text-black">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v12h4V14h3l1-4h-4V7a1 1 0 0 1 1-1h3V2z"/>
+          </svg>
+        </a>
+      
+        <!-- Ícone de Twitter -->
+        <a href="#" class="w-12 h-12 bg-white rounded-full flex items-center justify-center hover:bg-gray-200">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 text-black">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M23 3a10.91 10.91 0 0 1-3.142.86A5.507 5.507 0 0 0 22.5 1.57a10.945 10.945 0 0 1-3.49 1.332A5.502 5.502 0 0 0 16.62 5a5.522 5.522 0 0 0-.103.73A15.585 15.585 0 0 1 1.671 2.65a5.505 5.505 0 0 0 1.708 7.347 5.477 5.477 0 0 1-2.48-.686v.069a5.507 5.507 0 0 0 4.415 5.381A5.506 5.506 0 0 1 2 13.33a5.486 5.486 0 0 0 4.767 3.539c-3.58 2.8-7.928 2.658-11.438.745A15.592 15.592 0 0 0 8 19.2C13.77 19.2 17.5 12 17.5 5.5c0-.079-.004-.157-.01-.235.01-.04.01-.08.01-.12 0-1.184-.324-2.258-.875-3.18z"/>
+          </svg>
+        </a>
+      
+        <!-- Ícone de Instagram -->
+        <a href="#" class="w-12 h-12 bg-white rounded-full flex items-center justify-center hover:bg-gray-200">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 text-black">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2.16c3.182 0 3.56 0 4.8.07 1.15.07 2.18.4 3.03 1.08.86.68 1.52 1.64 1.88 2.75.57 1.7.57 3.73.57 7.07 0 3.34 0 5.37-.57 7.07-.36 1.11-1.02 2.07-1.88 2.75-.85.68-1.88 1.01-3.03 1.08-1.24.07-1.6.07-4.8.07s-3.56 0-4.8-.07c-1.15-.07-2.18-.4-3.03-1.08-.86-.68-1.52-1.64-1.88-2.75-.57-1.7-.57-3.73-.57-7.07 0-3.34 0-5.37.57-7.07.36-1.11 1.02-2.07 1.88-2.75.85-.68 1.88-1.01 3.03-1.08 1.24-.07 1.6-.07 4.8-.07zm0 1.6c-3.08 0-3.44 0-4.64.07-1.09.07-2.03.34-2.8.87-.77.53-1.4 1.3-1.86 2.26-.44 1.07-.75 2.27-.75 4.12s.31 3.05.75 4.12c.46.96 1.09 1.73 1.86 2.26.77.53 1.71.8 2.8.87 1.2.07 1.56.07 4.64.07s3.44 0 4.64-.07c1.09-.07 2.03-.34 2.8-.87.77-.53 1.4-1.3 1.86-2.26.44-1.07.75-2.27.75-4.12s-.31-3.05-.75-4.12c-.46-.96-1.09-1.73-1.86-2.26-.77-.53-1.71-.8-2.8-.87-1.2-.07-1.56-.07-4.64-.07zm0 6.96a2.52 2.52 0 1 1 0 5.04 2.52 2.52 0 0 1 0-5.04z"/>
+          </svg>
+        </a>
+      </div>
+
+        <p class="text-sm text-right text-gray-400 mt-4">© 2024 Nexus. Todos os direitos reservados.</p>
+      </div>
+
+        
+      </div>
+
+      
+    </footer>
+    
+
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
