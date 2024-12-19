@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link href="../styles/style.css" rel="stylesheet" />
+    <title>Nexus</title>
+  </head>
+  <body>
+    <nav class="flex items-center justify-between flex-wrap bg-white p-4 md:px-20">
+      <div class="flex items-center lg:w-auto w-1/2 flex-shrink-0 text-white mr-6">
+        <img src="../assets/images/Nexus.svg" alt="Nexus Logo" />
+      </div>
+      <div class="block lg:hidden">
+        <button
+          id="menu-button"
+          class="h-full flex items-center px-3 py-2 border rounded text-teal-500 border-teal-500 hover:text-teal-700 hover:border-teal-700"
+        >
+          <svg
+            class="fill-current h-4 w-4"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>Menu</title>
+            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+          </svg>
+        </button>
+      </div>
+      <div class="hidden lg:flex lg:items-center lg:space-x-4">
+        <a href="/src/index.html" class="text-[#1E1E1E] hover:text-[#607D8B]"
+          >Home</a
+        >
+        <a href="" class="text-[#1E1E1E] hover:text-[#607D8B]"
+          >Sobre</a
+        >
+        <a href="#responsive-header" class="text-[#1E1E1E] hover:text-[#607D8B]"
+          >Mural de pedidos</a
+        >
+        <a href="#responsive-header" class="text-[#1E1E1E] hover:text-[#607D8B]"
+          >Mapa</a
+        >
+      </div>
+      <div class="flex space-x-4 my-auto lg:block hidden">
+        <!-- Botão branco com texto azul -->
+        <button
+          class="bg-white text-blue-500 font-bold py-2 px-4 rounded border border-[#006BB1] hover:bg-blue-50"
+        >
+          <a href="pages/cadastro.html">Criar conta</a>
+         
+        </button>
+        <!-- Botão azul com texto branco -->
+        <button 
+          class="bg-[#1FA4E4] text-white font-bold py-2 px-4 rounded hover:bg-[#006BB1]"
+        >
+          <a href="pages/login.html">Entrar</a>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Modal para o menu -->
+    <div
+      id="menu-modal"
+      class="fixed inset-0 flex justify-start bg-black bg-opacity-50 hidden z-50"
+    >
+      <div
+        class="bg-white w-64 h-full p-6 shadow-lg transform -translate-x-full transition-transform duration-300"
+        id="modal-content"
+      >
+        <div class="flex justify-between items-center mb-4">
+          <h2 class="text-lg font-bold">Menu</h2>
+          <button id="close-menu" class="text-gray-500 hover:text-gray-700">
+            <svg
+              class="h-5 w-5"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="flex flex-col space-y-4">
+          <a href="/src/index.html" class="text-[#1E1E1E] hover:text-[#607D8B]">Home</a>
+          <a href="/src/pages/sobre.html" class="text-[#1E1E1E] hover:text-[#607D8B]">Sobre</a>
+          <a href="/src/pages/mural.html" class="text-[#1E1E1E] hover:text-[#607D8B]"
+            >Mural de pedidos</a
+          >
+          <a href="#mapa" class="text-[#1E1E1E] hover:text-[#607D8B]">Mapa</a>
+
+          <div class="flex space-x-4 my-auto lg:block">
+            <!-- Botão branco com texto azul -->
+            <button
+              class="bg-white text-blue-500 font-bold py-2 px-2 rounded border border-[#006BB1] hover:bg-blue-50"
+            >
+              <a href="/src/pages/cadastro.html">
+                Criar conta
+              </a>
+            </button>
+            <!-- Botão azul com texto branco -->
+            <button
+              class="bg-[#1FA4E4] text-white font-bold py-2 px-2 rounded hover:bg-[#006BB1]"
+            >
+              <a href="/src/pages/login.html">
+              Entrar
+              </a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <section
+      id="about"
+      class="flex flex-col lg:flex-row gap-14 md:px-20 px-4 py-12 bg-gray-100"
+    >
+
+   
+    <div class="lg:block hidden">
+        <img
+          src="../assets/images/pedido-1.png"
+          alt="Moradores em situação de rua"
+          class=""
+        />
+      </div>
+
+     
+      <div class="lg:w-1/2 flex flex-col justify-between">
+       
+        <h2 class="text-4xl font-bold mb-4 ">
+            Sem abrigo
+        </h2>
+        <p class="text-lg md:text-start text-justify mb-4">
+            Estamos desabrigados por conta dos alagamentos e fortes chuvas que estão acontecendo na área. Perdemos todos os pertences e as casas estão cheias de água. Estamos aceitando toda oportunidade de abrigo e doações de roupas. Precisamos de ajuda urgente! 
+        </p>
+
+        <div class="flex flex-col">
+            <h2 class="text-xl font-bold mb-1">
+                Local
+            </h2>
+            <p class="text-lg md:text-start text-justify mb-4">
+                1450 1ST AVE NEW YORK NY
+            </p>
+        </div>
+
+        <div class="flex justify-between mb-4">
+            <div class="flex flex-col">
+                <h2 class="text-xl font-bold mb-1">
+                    Nome
+                </h2>
+                <p class="text-lg md:text-start text-justify mb-4">
+                    Andrew Becker
+                </p>
+            </div>
+            <div class="flex flex-col">
+                <h2 class="text-xl font-bold mb-1">
+                    Email
+                </h2>
+                <p class="text-lg md:text-start text-justify mb-4">
+                    andrew.b@gmail.com
+                </p>
+            </div>
+        </div>
+
+        <div class="flex justify-between">
+            <div class="flex flex-col">
+                <h2 class="text-xl font-bold mb-1">
+                    Telefone
+                </h2>
+                <p class="text-lg md:text-start text-justify mb-4">
+                    +55 11 972010692
+                </p>
+            </div>
+            <div class="flex flex-col">
+                <h2 class="text-xl font-bold mb-1">
+                    Pessoas afetadas
+                </h2>
+                <p class="text-lg md:text-start text-justify mb-4">
+                    9
+                </p>
+            </div>
+        </div>
+
+        <div class="flex gap-6">
+            <button
+            class="bg-[#1FA4E4] text-white font-bold mt-10 py-4 md:px-24 px-4 rounded hover:bg-[#006BB1]"
+            >
+            Quero ajudar
+            </button>
+
+            <button
+            class="bg-white text-[#1FA4E4] border border-[#1FA4E4] font-bold mt-10 py-4 md:px-24 px-4 rounded hover:bg-blue-50"
+            >
+            Conheça o autor
+            </button>
+        </div>
+      </div>
+
+      
+    </section>
+
+    <h2 class="text-4xl md:px-20 max-sm:text-center font-bold my-14">Outros pedidos próximos</h2>
+
+    <div class="flex md:flex-row flex-col mt-10 md:px-20 px-4 gap-24 mb-16">
+        <!-- Card 1 -->
+        <div style="height: 400px; background-image: url(../assets/images/mural-1.png); background-size: 100% 100%;"
+          class="bg-#[F3FBFF] rounded-lg md:w-1/3 w-full relative flex flex-col justify-end"
+        >
+            <div class="flex gap-3 px-8 items-stretch">
+                <div class="bg-white rounded-lg shadow-md p-4 w-3/4 z-10 mb-12">
+                    <h3 class="text-lg font-semibold">Estamos sem água</h3>
+                    <p class="text-sm text-gray-600">Karachi, Sindh, Pakistan</p>
+                    <p class="text-sm text-gray-600">27 pessoas</p>
+                </div>
+
+                <div class="rounded-lg flex mb-12 z-10">
+                    <img src="../assets/images/sobre-water-icon.png" alt="Pingo de agua">
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div style="height: 400px; background-image: url(../assets/images/mural-2.png); background-size: 100% 100%"
+          class="bg-#[F3FBFF] rounded-lg  md:w-1/3 w-full flex flex-col justify-end"
+        >
+            <div class="flex gap-3 px-8 items-stretch">
+                <div class="bg-white rounded-lg shadow-md p-4 w-3/4 z-10 mb-12">
+                    <h3 class="text-lg font-semibold">Sem abrigo</h3>
+                    <p class="text-sm text-gray-600">1450 1ST AVE NEW YORK NY</p>
+                    <p class="text-sm text-gray-600">9 pessoas</p>
+                </div>
+
+                <div class="rounded-lg flex mb-12 z-10">
+                    <img src="../assets/images/mural-house-icon.png" alt="Pingo de agua">
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div style="height: 400px; background-image: url(../assets/images/mural-3.png); background-size: 100% 100%"
+          class="bg-#[F3FBFF] rounded-lg  md:w-1/3 w-full flex flex-col justify-end"
+        >
+            <div class="flex gap-3 px-8 items-stretch">
+                <div class="bg-white rounded-lg shadow-md p-4 w-3/4 z-10 mb-12">
+                    <h3 class="text-lg font-semibold">Falta de alimentos</h3>
+                    <p class="text-sm text-gray-600">Rua Salomão, 316 - São Paulo, SP - Brasil</p>
+                    <p class="text-sm text-gray-600">12 pessoas</p>
+                </div>
+
+                <div class="rounded-lg flex mb-12 z-10">
+                    <img src="../assets/images/mural-fork-icon.png" alt="Pingo de agua">
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+
+    <footer class="bg-black text-white py-12">
+        <div class="w-full lg:px-20 px-4 text-[#D4D4D4]">
+          <!-- Primeira Seção: Logo e Informações -->
+          <div class="grid md:grid-cols-3 gap-12">
+            <div class="text-center md:text-left">
+              <h1 class="text-4xl text-white font-bold mb-4">Nexus</h1>
+              <p class="text-md text-[#] mb-4">nexus@gmail.com</p>
+              <p class="text-md text-[#] mb-4">55+ 17 99132-3055</p>
+            </div>
+      
+            <!-- Segunda Seção: Links Rápidos -->
+            <div class="text-center md:text-left">
+              <h3 class="text-2xl text-white font-bold mb-4">Acesso rápido</h3>
+              <ul class="space-y-2">
+                <li><a href="/src/index.html" class="hover:text-[#1FA4E4]">Home</a></li>
+                <li><a href="/src/pages/sobre.html" class="hover:text-[#1FA4E4]">Sobre</a></li>
+                <li><a href="/src/pages/mural.html" class="hover:text-[#1FA4E4]">Mural de Pedidos</a></li>
+                <li><a href="#mapa" class="hover:text-[#1FA4E4]">Mapa</a></li>
+                <li><a href="#contato" class="hover:text-[#1FA4E4]">Contato</a></li>
+              </ul>
+            </div>
+  
+            <!-- Quarta Seção: Newsletter -->
+          <div class="text-left">
+            <h3 class="text-2xl font-semibold mb-4 text-white">Inscreva-se para novidades</h3>
+            <form action="#" method="POST" class="flex">
+              <input type="email" class="border-2 border-[#D4D4D4] ps-2 bg-black w-full text-nowrap text-white rounded-l-md" placeholder="Seu e-mail" required>
+              <button type="submit" class="bg-white text-nowrap text-black p-3 rounded-r-md hover:bg-[#D4D4D4] transition duration-300">
+                Inscrever-se
+              </button>
+            </form>
+          </div>
+      
+            
+            </div>
+          </div>
+      
+        </div>
+      
+        <div class="w-full mt-8 text-center lg:px-20">
+          <div class="border-t-2 border-[#D4D4D4] w-full"></div>
+          
+          <div class="flex justify-between mt-4 items-center">
+          <div class="flex gap-3 px-4">
+          <a href="#" class="w-12 h-12 bg-white rounded-full flex items-center justify-center hover:bg-gray-200">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 text-black">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v12h4V14h3l1-4h-4V7a1 1 0 0 1 1-1h3V2z"/>
+            </svg>
+          </a>
+        
+          <!-- Ícone de Twitter -->
+          <a href="#" class="w-12 h-12 bg-white rounded-full flex items-center justify-center hover:bg-gray-200">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 text-black">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M23 3a10.91 10.91 0 0 1-3.142.86A5.507 5.507 0 0 0 22.5 1.57a10.945 10.945 0 0 1-3.49 1.332A5.502 5.502 0 0 0 16.62 5a5.522 5.522 0 0 0-.103.73A15.585 15.585 0 0 1 1.671 2.65a5.505 5.505 0 0 0 1.708 7.347 5.477 5.477 0 0 1-2.48-.686v.069a5.507 5.507 0 0 0 4.415 5.381A5.506 5.506 0 0 1 2 13.33a5.486 5.486 0 0 0 4.767 3.539c-3.58 2.8-7.928 2.658-11.438.745A15.592 15.592 0 0 0 8 19.2C13.77 19.2 17.5 12 17.5 5.5c0-.079-.004-.157-.01-.235.01-.04.01-.08.01-.12 0-1.184-.324-2.258-.875-3.18z"/>
+            </svg>
+          </a>
+        
+          <!-- Ícone de Instagram -->
+          <a href="#" class="w-12 h-12 bg-white rounded-full flex items-center justify-center hover:bg-gray-200">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 text-black">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2.16c3.182 0 3.56 0 4.8.07 1.15.07 2.18.4 3.03 1.08.86.68 1.52 1.64 1.88 2.75.57 1.7.57 3.73.57 7.07 0 3.34 0 5.37-.57 7.07-.36 1.11-1.02 2.07-1.88 2.75-.85.68-1.88 1.01-3.03 1.08-1.24.07-1.6.07-4.8.07s-3.56 0-4.8-.07c-1.15-.07-2.18-.4-3.03-1.08-.86-.68-1.52-1.64-1.88-2.75-.57-1.7-.57-3.73-.57-7.07 0-3.34 0-5.37.57-7.07.36-1.11 1.02-2.07 1.88-2.75.85-.68 1.88-1.01 3.03-1.08 1.24-.07 1.6-.07 4.8-.07zm0 1.6c-3.08 0-3.44 0-4.64.07-1.09.07-2.03.34-2.8.87-.77.53-1.4 1.3-1.86 2.26-.44 1.07-.75 2.27-.75 4.12s.31 3.05.75 4.12c.46.96 1.09 1.73 1.86 2.26.77.53 1.71.8 2.8.87 1.2.07 1.56.07 4.64.07s3.44 0 4.64-.07c1.09-.07 2.03-.34 2.8-.87.77-.53 1.4-1.3 1.86-2.26.44-1.07.75-2.27.75-4.12s-.31-3.05-.75-4.12c-.46-.96-1.09-1.73-1.86-2.26-.77-.53-1.71-.8-2.8-.87-1.2-.07-1.56-.07-4.64-.07zm0 6.96a2.52 2.52 0 1 1 0 5.04 2.52 2.52 0 0 1 0-5.04z"/>
+            </svg>
+          </a>
+        </div>
+  
+          <p class="text-sm text-right text-gray-400 mt-4">© 2024 Nexus. Todos os direitos reservados.</p>
+        </div>
+  
+          
+        </div>
+  
+        
+      </footer>
+    
+
+    <script src="../scripts/main.js"></script>
+    <script src="../scripts/swipe.js"></script>
+  </body>
+</html>
