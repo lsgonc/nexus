@@ -1,108 +1,130 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<script src="https://cdn.tailwindcss.com"></script>
 
-    <title>Nexus - Cadastro</title>
-    <style>
-      .hidden { display: none; }
-    </style>
-  </head>
-  <body class="bg-gray-100 font-sans">
-    <div class="flex min-h-screen">
-      <!-- Imagem à esquerda -->
-      <div class="w-1/2 bg-cover bg-center hidden md:block" style="background-image: url('../assets/images/login-bg.png');"></div>
+	<!-- Google fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
 
-      <!-- Formulário com abas -->
-      <div class="md:w-1/2 w-full flex flex-col items-center justify-center bg-gray-100">
-        <!-- Controle de abas (bolinhas) -->
-        <div class="tab-nav flex items-center mb-6">
-            <button class="w-4 h-4 bg-blue-500 rounded-full mx-2 focus:outline-none" onclick="showTab(1)"></button>
-            <button class="w-4 h-4 bg-gray-400 rounded-full mx-2 focus:outline-none" onclick="showTab(2)"></button>
-            <button class="w-4 h-4 bg-gray-400 rounded-full mx-2 focus:outline-none" onclick="showTab(3)"></button>
-        </div>
+	<title>Nexus - Cadastro</title>
+	<style>
+		.hidden {
+			display: none;
+		}
+	</style>
+</head>
 
-        <!-- Conteúdo das abas -->
-        <div id="tab1" class="tab-content w-full max-w-md p-8 bg-white shadow-lg rounded">
-          <h2 class="text-3xl font-bold text-[#1E1E1E] mb-4">Crie uma nova conta</h2>
-          <p class="text-lg text-[#525560] mb-6">Faça parte dessa comunidade</p>
-          <form>
-            <!-- Campos de cadastro -->
-            <div class="mb-4">
-              <label for="login" class="block text-gray-700 font-medium mb-2">Login</label>
-              <input type="text" id="login" placeholder="Insira seu login" class="w-full p-3 border rounded focus:outline-none focus:ring focus:ring-blue-300" />
-            </div>
-            <div class="mb-4">
-              <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
-              <input type="email" id="email" placeholder="Insira seu email" class="w-full p-3 border rounded focus:outline-none focus:ring focus:ring-blue-300" />
-            </div>
-            <div class="mb-6">
-              <label for="senha" class="block text-gray-700 font-medium mb-2">Senha</label>
-              <input type="password" id="senha" placeholder="Insira sua senha" class="w-full p-3 border rounded focus:outline-none focus:ring focus:ring-blue-300" />
-            </div>
-            <div class="mb-6">
-                <label for="confirmar-senha" class="block text-gray-700 font-medium mb-2">Senha</label>
-                <input type="password" id="confirmar-senha" placeholder="Confirme sua senha" class="w-full p-3 border rounded focus:outline-none focus:ring focus:ring-blue-300" />
-              </div>
-            <button type="button" class="w-full rounded-lg bg-blue-500 text-white py-3 hover:bg-blue-600 transition duration-300" onclick="showTab(2)">Próximo</button>
-          </form>
-        </div>
+<body class="bg-gray-100 font-sans">
+	<div class="flex min-h-screen">
+		<!-- Imagem à esquerda -->
+		<div class="w-1/2 bg-cover bg-center hidden md:block"
+			style="background-image: url('../assets/images/login-bg.png');"></div>
 
-        <div id="tab2" class="tab-content hidden w-full max-w-md p-8 bg-white shadow-lg rounded">
-          <h2 class="text-3xl font-bold text-[#1E1E1E] mb-4">Mais informações</h2>
-          <p class="text-lg text-[#525560] mb-6">Essas informações são importantes para contato e localização</p>
-          <form>
-            <!-- Campos de etapa 2 -->
-            <div class="mb-4">
-              <label for="telefone" class="block text-gray-700 font-medium mb-2">Telefone</label>
-              <input type="text" id="telefone" placeholder="+55 11 972010692" class="w-full p-3 border rounded focus:outline-none focus:ring focus:ring-blue-300" />
-            </div>
-            <div class="mb-6">
-              <label for="endereço" class="block text-gray-700 font-medium mb-2">Endereço</label>
-              <input type="text" id="endereço" placeholder="Insira seu CPF" class="w-full p-3 border rounded focus:outline-none focus:ring focus:ring-blue-300" />
-            </div>
-            <button type="button" class="w-full rounded-lg bg-blue-500 text-white py-3 hover:bg-blue-600 transition duration-300" onclick="showTab(3)">Próximo</button>
-          </form>
-        </div>
+		<!-- Formulário com abas -->
+		<div class="md:w-1/2 w-full flex flex-col items-center justify-center bg-gray-100">
+			<!-- Controle de abas (bolinhas) -->
+			<div class="tab-nav flex items-center mb-6">
+				<button class="w-4 h-4 bg-blue-500 rounded-full mx-2 focus:outline-none" onclick="showTab(1)"></button>
+				<button class="w-4 h-4 bg-gray-400 rounded-full mx-2 focus:outline-none" onclick="showTab(2)"></button>
+				<button class="w-4 h-4 bg-gray-400 rounded-full mx-2 focus:outline-none" onclick="showTab(3)"></button>
+			</div>
 
-        <div id="tab3" class="tab-content hidden w-full max-w-md p-8 bg-white shadow-lg rounded">
-          <h2 class="text-3xl font-bold text-[#1E1E1E] mb-4">Tipo de conta</h2>
-          <p class="text-lg text-[#525560] mb-6">Aqui você pode escolher entre uma conta de usuário comum ou voluntário</p>
-          <form>
-            <!-- Campos de finalização -->
-            <a class="text-[#1FA4E4]">Usuário comum</a>
-            <div class="mb-6 mt-4">
-                <input type="text" id="voluntario" placeholder="Voluntário" class="w-full p-3 border rounded focus:outline-none focus:ring focus:ring-blue-300" />
-              </div>
-            <button  type="button" onclick="openModal()" class="w-full rounded-lg bg-blue-500 text-white py-3 hover:bg-blue-600 transition duration-300">Concluir</button>
-          </form>
-        </div>
-      </div>
-    </div>
+			<!-- Conteúdo das abas -->
+			<div id="tab1" class="tab-content w-full max-w-md p-8 bg-white shadow-lg rounded">
+				<h2 class="text-3xl font-bold text-[#1E1E1E] mb-4">Crie uma nova conta</h2>
+				<p class="text-lg text-[#525560] mb-6">Faça parte dessa comunidade</p>
+				<form>
+					<!-- Campos de cadastro -->
+					<div class="mb-4">
+						<label for="login" class="block text-gray-700 font-medium mb-2">Login</label>
+						<input type="text" id="login" placeholder="Insira seu login"
+							class="w-full p-3 border rounded focus:outline-none focus:ring focus:ring-blue-300" />
+					</div>
+					<div class="mb-4">
+						<label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+						<input type="email" id="email" placeholder="Insira seu email"
+							class="w-full p-3 border rounded focus:outline-none focus:ring focus:ring-blue-300" />
+					</div>
+					<div class="mb-6">
+						<label for="senha" class="block text-gray-700 font-medium mb-2">Senha</label>
+						<input type="password" id="senha" placeholder="Insira sua senha"
+							class="w-full p-3 border rounded focus:outline-none focus:ring focus:ring-blue-300" />
+					</div>
+					<div class="mb-6">
+						<label for="confirmar-senha" class="block text-gray-700 font-medium mb-2">Senha</label>
+						<input type="password" id="confirmar-senha" placeholder="Confirme sua senha"
+							class="w-full p-3 border rounded focus:outline-none focus:ring focus:ring-blue-300" />
+					</div>
+					<button type="button"
+						class="w-full rounded-lg bg-blue-500 text-white py-3 hover:bg-blue-600 transition duration-300"
+						onclick="showTab(2)">Próximo</button>
+				</form>
+			</div>
 
-    <!-- Modal -->
-    <div id="confirmationModal" class="hidden fixed inset-0 flex items-center justify-center text-center bg-black bg-opacity-50">
-        <div class="bg-white rounded-lg shadow-lg w-full max-w-sm p-6">
-          <h3 class="text-xl font-bold text-black mb-4">Email de confirmação enviado</h3>
-          <p class="text-[#525560] mb-6">Acabamos de enviar um email de confirmação para <span class="text-[#1FA4E4]">user@gmail.com</span></p>
-          <input type="text" placeholder="Código de confirmação" class="w-full p-3 mb-4 border border-[#D4D4D4] rounded focus:outline-none focus:ring focus:ring-blue-300" />
-          <div class="flex justify-between">
-            <button class="px-4 py-2 bg-white border border-[#1FA4E4] text-[#1FA4E4] rounded hover:bg-blue-50 transition duration-300 mr-2" onclick="closeModal()">Cancelar</button>
-            <button class="px-4 py-2 text-white rounded hover:bg-blue-600 transition duration-300 bg-[#1FA4E4]">Confirmar</button>
-          </div>
-        </div>
-      </div>
+			<div id="tab2" class="tab-content hidden w-full max-w-md p-8 bg-white shadow-lg rounded">
+				<h2 class="text-3xl font-bold text-[#1E1E1E] mb-4">Mais informações</h2>
+				<p class="text-lg text-[#525560] mb-6">Essas informações são importantes para contato e localização</p>
+				<form>
+					<!-- Campos de etapa 2 -->
+					<div class="mb-4">
+						<label for="telefone" class="block text-gray-700 font-medium mb-2">Telefone</label>
+						<input type="text" id="telefone" placeholder="+55 11 972010692"
+							class="w-full p-3 border rounded focus:outline-none focus:ring focus:ring-blue-300" />
+					</div>
+					<div class="mb-6">
+						<label for="endereço" class="block text-gray-700 font-medium mb-2">Endereço</label>
+						<input type="text" id="endereço" placeholder="Insira seu CPF"
+							class="w-full p-3 border rounded focus:outline-none focus:ring focus:ring-blue-300" />
+					</div>
+					<button type="button"
+						class="w-full rounded-lg bg-blue-500 text-white py-3 hover:bg-blue-600 transition duration-300"
+						onclick="showTab(3)">Próximo</button>
+				</form>
+			</div>
 
-    <script src="../scripts/tabs.js"></script>
-  </body>
+			<div id="tab3" class="tab-content hidden w-full max-w-md p-8 bg-white shadow-lg rounded">
+				<h2 class="text-3xl font-bold text-[#1E1E1E] mb-4">Tipo de conta</h2>
+				<p class="text-lg text-[#525560] mb-6">Aqui você pode escolher entre uma conta de usuário comum ou
+					voluntário</p>
+				<form>
+					<!-- Campos de finalização -->
+					<a class="text-[#1FA4E4]">Usuário comum</a>
+					<div class="mb-6 mt-4">
+						<input type="text" id="voluntario" placeholder="Voluntário"
+							class="w-full p-3 border rounded focus:outline-none focus:ring focus:ring-blue-300" />
+					</div>
+					<button type="button" onclick="openModal()"
+						class="w-full rounded-lg bg-blue-500 text-white py-3 hover:bg-blue-600 transition duration-300">Concluir</button>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal -->
+	<div id="confirmationModal"
+		class="hidden fixed inset-0 flex items-center justify-center text-center bg-black bg-opacity-50">
+		<div class="bg-white rounded-lg shadow-lg w-full max-w-sm p-6">
+			<h3 class="text-xl font-bold text-black mb-4">Email de confirmação enviado</h3>
+			<p class="text-[#525560] mb-6">Acabamos de enviar um email de confirmação para <span
+					class="text-[#1FA4E4]">user@gmail.com</span></p>
+			<input type="text" placeholder="Código de confirmação"
+				class="w-full p-3 mb-4 border border-[#D4D4D4] rounded focus:outline-none focus:ring focus:ring-blue-300" />
+			<div class="flex justify-between">
+				<button
+					class="px-4 py-2 bg-white border border-[#1FA4E4] text-[#1FA4E4] rounded hover:bg-blue-50 transition duration-300 mr-2"
+					onclick="closeModal()">Cancelar</button>
+				<button
+					class="px-4 py-2 text-white rounded hover:bg-blue-600 transition duration-300 bg-[#1FA4E4]">Confirmar</button>
+			</div>
+		</div>
+	</div>
+
+	<script src="../scripts/tabs.js"></script>
+</body>
+
 </html>

@@ -1,439 +1,371 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
 
-    <!--Google fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
-    />
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <link href="../styles/style.css" rel="stylesheet" />
-    <title>Nexus</title>
-  </head>
-  <body>
-    <nav class="flex items-center justify-between flex-wrap bg-white p-4 lg:px-20">
-      <div class="flex items-center lg:w-auto w-1/2 flex-shrink-0 text-white mr-6">
-        <img src="../assets/images/Nexus.svg" alt="Nexus Logo" />
-      </div>
-      <div class="block lg:hidden">
-        <button
-          id="menu-button"
-          class="h-full flex items-center px-3 py-2 border rounded text-teal-500 border-teal-500 hover:text-teal-700 hover:border-teal-700"
-        >
-          <svg
-            class="fill-current h-4 w-4"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <title>Menu</title>
-            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-          </svg>
-        </button>
-      </div>
-      <div class="hidden lg:flex lg:items-center lg:space-x-4">
-        <a href="/src/index.html" class="text-[#1E1E1E] hover:text-[#607D8B]"
-          >Home</a
-        >
-        <a href="" class="text-[#1E1E1E] hover:text-[#607D8B]"
-          >Sobre</a
-        >
-        <a href="/src/pages/mural.html" class="text-[#1E1E1E] hover:text-[#607D8B]"
-          >Mural de pedidos</a
-        >
-        <a href="#mapa" class="text-[#1E1E1E] hover:text-[#607D8B]"
-          >Mapa</a
-        >
-      </div>
-      <div class="flex space-x-4 my-auto lg:block hidden">
-        <!-- Botão branco com texto azul -->
-        <button
-          class="bg-white text-blue-500 font-bold py-2 px-4 rounded border border-[#006BB1] hover:bg-blue-50"
-        >
-          <a href="/src/pages/cadastro.html">Criar conta</a>
-         
-        </button>
-        <!-- Botão azul com texto branco -->
-        <button 
-          class="bg-[#1FA4E4] text-white font-bold py-2 px-4 rounded hover:bg-[#006BB1]"
-        >
-          <a href="/src/pages/login.html">Entrar</a>
-        </button>
-      </div>
-    </nav>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Modal para o menu -->
-    <div
-      id="menu-modal"
-      class="fixed inset-0 flex justify-start bg-black bg-opacity-50 hidden z-50"
-    >
-      <div
-        class="bg-white w-64 h-full p-6 shadow-lg transform -translate-x-full transition-transform duration-300"
-        id="modal-content"
-      >
-        <div class="flex justify-between items-center mb-4">
-          <h2 class="text-lg font-bold">Menu</h2>
-          <button id="close-menu" class="text-gray-500 hover:text-gray-700">
-            <svg
-              class="h-5 w-5"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M6 18L18 6M6 6l12 12"
-              />
-            </svg>
-          </button>
-        </div>
-        <div class="flex flex-col space-y-4">
-          <a href="/src/index.html" class="text-[#1E1E1E] hover:text-[#607D8B]">Home</a>
-          <a href="/src/pages/sobre.html" class="text-[#1E1E1E] hover:text-[#607D8B]">Sobre</a>
-          <a href="/src/pages/mural.html" class="text-[#1E1E1E] hover:text-[#607D8B]"
-            >Mural de pedidos</a
-          >
-          <a href="#mapa" class="text-[#1E1E1E] hover:text-[#607D8B]">Mapa</a>
+	<!--Google fonts-->
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+		rel="stylesheet" />
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	<link href="../styles/style.css" rel="stylesheet" />
+	<title>Nexus</title>
+</head>
 
-          <div class="flex space-x-4 my-auto lg:block">
-            <!-- Botão branco com texto azul -->
-            <button
-              class="bg-white text-blue-500 font-bold py-2 px-2 rounded border border-[#006BB1] hover:bg-blue-50"
-            >
-              <a href="/src/pages/cadastro.html">
-                Criar conta
-              </a>
-            </button>
-            <!-- Botão azul com texto branco -->
-            <button
-              class="bg-[#1FA4E4] text-white font-bold py-2 px-2 rounded hover:bg-[#006BB1]"
-            >
-              <a href="/src/pages/login.html">
-              Entrar
-              </a>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
+<body>
+	<nav class="flex items-center justify-between flex-wrap bg-white p-4 lg:px-20">
+		<div class="flex items-center lg:w-auto w-1/2 flex-shrink-0 text-white mr-6">
+			<img src="../assets/images/Nexus.svg" alt="Nexus Logo" />
+		</div>
+		<div class="block lg:hidden">
+			<button id="menu-button"
+				class="h-full flex items-center px-3 py-2 border rounded text-teal-500 border-teal-500 hover:text-teal-700 hover:border-teal-700">
+				<svg class="fill-current h-4 w-4" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+					<title>Menu</title>
+					<path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+				</svg>
+			</button>
+		</div>
+		<div class="hidden lg:flex lg:items-center lg:space-x-4">
+			<a href="/src/index.html" class="text-[#1E1E1E] hover:text-[#607D8B]">Home</a>
+			<a href="" class="text-[#1E1E1E] hover:text-[#607D8B]">Sobre</a>
+			<a href="/src/pages/mural.html" class="text-[#1E1E1E] hover:text-[#607D8B]">Mural de pedidos</a>
+			<a href="#mapa" class="text-[#1E1E1E] hover:text-[#607D8B]">Mapa</a>
+		</div>
+		<div class="flex space-x-4 my-auto lg:block hidden">
+			<!-- Botão branco com texto azul -->
+			<button class="bg-white text-blue-500 font-bold py-2 px-4 rounded border border-[#006BB1] hover:bg-blue-50">
+				<a href="/src/pages/cadastro.html">Criar conta</a>
 
-    <section
-      id="sobre-nos"
-      class="flex flex-col items-center justify-between mt-10 mb-28"
-    >   
-        <div class="flex flex-col items-center lg:w-1/2 px-4">
-        <h3 class="text-md w-auto text-nowrap text-[#1FA4E4]">SOBRE NÓS</h3>
+			</button>
+			<!-- Botão azul com texto branco -->
+			<button class="bg-[#1FA4E4] text-white font-bold py-2 px-4 rounded hover:bg-[#006BB1]">
+				<a href="/src/pages/login.html">Entrar</a>
+			</button>
+		</div>
+	</nav>
 
-        <h2 class="md:text-5xl text-4xl font-bold my-6">
-            Juntos somos mais fortes
-        </h2>
-        <p class="text-lg md:text-start text-justify ">
-            Começamos como uma pequena iniciativa, mas com o tempo, vimos nossa comunidade crescer e nossa missão se fortalecer. Hoje, o Nexus é um movimento que mobiliza milhares de pessoas em todo o mundo.
-        </p>
-    </div>
-    </section>
+	<!-- Modal para o menu -->
+	<div id="menu-modal" class="fixed inset-0 flex justify-start bg-black bg-opacity-50 hidden z-50">
+		<div class="bg-white w-64 h-full p-6 shadow-lg transform -translate-x-full transition-transform duration-300"
+			id="modal-content">
+			<div class="flex justify-between items-center mb-4">
+				<h2 class="text-lg font-bold">Menu</h2>
+				<button id="close-menu" class="text-gray-500 hover:text-gray-700">
+					<svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+						stroke="currentColor">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+							d="M6 18L18 6M6 6l12 12" />
+					</svg>
+				</button>
+			</div>
+			<div class="flex flex-col space-y-4">
+				<a href="/src/index.html" class="text-[#1E1E1E] hover:text-[#607D8B]">Home</a>
+				<a href="/src/pages/sobre.html" class="text-[#1E1E1E] hover:text-[#607D8B]">Sobre</a>
+				<a href="/src/pages/mural.html" class="text-[#1E1E1E] hover:text-[#607D8B]">Mural de pedidos</a>
+				<a href="#mapa" class="text-[#1E1E1E] hover:text-[#607D8B]">Mapa</a>
 
-    <section
-  class="relative w-full bg-cover bg-center mb-28"
-  style="
+				<div class="flex space-x-4 my-auto lg:block">
+					<!-- Botão branco com texto azul -->
+					<button
+						class="bg-white text-blue-500 font-bold py-2 px-2 rounded border border-[#006BB1] hover:bg-blue-50">
+						<a href="/src/pages/cadastro.html">
+							Criar conta
+						</a>
+					</button>
+					<!-- Botão azul com texto branco -->
+					<button class="bg-[#1FA4E4] text-white font-bold py-2 px-2 rounded hover:bg-[#006BB1]">
+						<a href="/src/pages/login.html">
+							Entrar
+						</a>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<section id="sobre-nos" class="flex flex-col items-center justify-between mt-10 mb-28">
+		<div class="flex flex-col items-center lg:w-1/2 px-4">
+			<h3 class="text-md w-auto text-nowrap text-[#1FA4E4]">SOBRE NÓS</h3>
+
+			<h2 class="md:text-5xl text-4xl font-bold my-6">
+				Juntos somos mais fortes
+			</h2>
+			<p class="text-lg md:text-start text-justify ">
+				Começamos como uma pequena iniciativa, mas com o tempo, vimos nossa comunidade crescer e nossa missão se
+				fortalecer. Hoje, o Nexus é um movimento que mobiliza milhares de pessoas em todo o mundo.
+			</p>
+		</div>
+	</section>
+
+	<section class="relative w-full bg-cover bg-center mb-28" style="
     background-image: url('../assets/images/sobre-img.png');
     height: 600px;
-  "
->
-  <div class="absolute inset-0 bg-black opacity-50"></div>
-  <!-- Camada escura para destacar o texto -->
-  <div
-    class="relative px-20 z-10 flex flex-col justify-between w-full h-full lg:text-start text-center text-white"
-  >
-    <!-- Swiper Container -->
-    <div class="swiper mySwiper w-full h-full">
-      <!-- Swiper Wrapper -->
-      <div class="swiper-wrapper flex items-center">
-        <!-- Card 1 -->
-        <div
-          class="swiper-slide backdrop-blur-md backdrop-brightness-200 flex flex-col justify-center items-center bg-#[F3FBFF] py-6 lg:px-16 px-4 rounded-lg border-2 border-[#1FA4E4]"
-          style="height: 400px;"
-        >
-          <h4 class="text-8xl font-bold text-white mb-2">230</h4>
-          <p class="text-white text-2xl text-[#1E1E1E]">
-            Pessoas já foram impactadas por nossa ajuda
-          </p>
-        </div>
+  ">
+		<div class="absolute inset-0 bg-black opacity-50"></div>
+		<!-- Camada escura para destacar o texto -->
+		<div
+			class="relative px-20 z-10 flex flex-col justify-between w-full h-full lg:text-start text-center text-white">
+			<!-- Swiper Container -->
+			<div class="swiper mySwiper w-full h-full">
+				<!-- Swiper Wrapper -->
+				<div class="swiper-wrapper flex items-center">
+					<!-- Card 1 -->
+					<div class="swiper-slide backdrop-blur-md backdrop-brightness-200 flex flex-col justify-center items-center bg-#[F3FBFF] py-6 lg:px-16 px-4 rounded-lg border-2 border-[#1FA4E4]"
+						style="height: 400px;">
+						<h4 class="text-8xl font-bold text-white mb-2">230</h4>
+						<p class="text-white text-2xl text-[#1E1E1E]">
+							Pessoas já foram impactadas por nossa ajuda
+						</p>
+					</div>
 
-        <!-- Card 2 -->
-        <div
-          class="swiper-slide backdrop-blur-md backdrop-brightness-200 flex flex-col justify-center items-center bg-#[F3FBFF] py-6 lg:px-16 px-4 rounded-lg border-2 border-[#1FA4E4]"
-          style="height: 400px;"
-        >
-          <h4 class="text-8xl font-bold text-white mb-2">58</h4>
-          <p class="text-white text-2xl text-[#1E1E1E]">
-            Doações recebidas e contribuiram com a causa
-          </p>
-        </div>
+					<!-- Card 2 -->
+					<div class="swiper-slide backdrop-blur-md backdrop-brightness-200 flex flex-col justify-center items-center bg-#[F3FBFF] py-6 lg:px-16 px-4 rounded-lg border-2 border-[#1FA4E4]"
+						style="height: 400px;">
+						<h4 class="text-8xl font-bold text-white mb-2">58</h4>
+						<p class="text-white text-2xl text-[#1E1E1E]">
+							Doações recebidas e contribuiram com a causa
+						</p>
+					</div>
 
-        <!-- Card 3 -->
-        <div
-          class="swiper-slide backdrop-blur-md backdrop-brightness-200 flex flex-col justify-center items-center bg-#[F3FBFF] py-6 lg:px-16 px-4 rounded-lg border-2 border-[#1FA4E4]"
-          style="height: 400px;"
-        >
-          <h4 class="text-8xl font-bold text-white mb-2">1379</h4>
-          <p class="text-white text-2xl text-[#1E1E1E]">
-            Voluntários já fazem parte da nossa equipe
-          </p>
-        </div>
-      </div>
+					<!-- Card 3 -->
+					<div class="swiper-slide backdrop-blur-md backdrop-brightness-200 flex flex-col justify-center items-center bg-#[F3FBFF] py-6 lg:px-16 px-4 rounded-lg border-2 border-[#1FA4E4]"
+						style="height: 400px;">
+						<h4 class="text-8xl font-bold text-white mb-2">1379</h4>
+						<p class="text-white text-2xl text-[#1E1E1E]">
+							Voluntários já fazem parte da nossa equipe
+						</p>
+					</div>
+				</div>
 
-      <!-- Swiper Pagination -->
-      <div class="swiper-pagination"></div>
+				<!-- Swiper Pagination -->
+				<div class="swiper-pagination"></div>
 
-      <!-- Swiper Navigation (opcional) -->
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
-    </div>
-  </div>
-</section>
+				<!-- Swiper Navigation (opcional) -->
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>
+			</div>
+		</div>
+	</section>
 
 
-    <section
-      id="nossa-historia"
-      class="flex flex-col items-center justify-between mt-10"
-    >   
-        <div class="flex flex-col items-center lg:w-1/2 px-4">
-        <h3 class="text-md w-auto text-nowrap text-[#1FA4E4]">NOSSA HISTÓRIA</h3>
+	<section id="nossa-historia" class="flex flex-col items-center justify-between mt-10">
+		<div class="flex flex-col items-center lg:w-1/2 px-4">
+			<h3 class="text-md w-auto text-nowrap text-[#1FA4E4]">NOSSA HISTÓRIA</h3>
 
-        <h2 class="text-5xl font-bold my-6">
-            Nosso começo
-        </h2>
-        <p class="text-lg md:text-start text-justify mb-4">
-            A história do Nexus começou com um grupo de amigos que se uniu para ajudar as vítimas de um terremoto devastador. Eles perceberam que a falta de comunicação e coordenação dificultava o acesso da ajuda às pessoas que mais precisavam. A partir dessa experiência, decidiram criar uma plataforma que permitisse que voluntários e organizações se conectassem diretamente com as comunidades afetadas.        </p>
-    
-        <p class="text-lg md:text-start text-justify mb-4">O Nexus rapidamente se tornou um ponto de encontro para pessoas de todo o mundo que queriam fazer a diferença. Voluntários de diferentes origens e habilidades se inscreveram para oferecer sua ajuda, enquanto comunidades afetadas por desastres encontraram apoio e recursos para se reconstruir.</p>
-        <p class="text-lg md:text-start text-justify mb-4">A plataforma cresceu rapidamente, expandindo sua atuação para outros tipos de desastres e abrangendo uma área geográfica cada vez maior. Hoje, o Nexus é uma comunidade global de mais de 1000 voluntários e 27 organizações parceiras, que juntos têm ajudado a reconstruir comunidades em mais de 10 países.</p>
-        <p class="text-lg md:text-start text-justify mb-4">A história do Nexus é uma história de esperança, solidariedade e impacto. É a história de pessoas comuns que se uniram para fazer a diferença, mostrando que mesmo diante da adversidade, é possível construir um mundo melhor.</p>
-        </div>
- 
-    </section>
+			<h2 class="text-5xl font-bold my-6">
+				Nosso começo
+			</h2>
+			<p class="text-lg md:text-start text-justify mb-4">
+				A história do Nexus começou com um grupo de amigos que se uniu para ajudar as vítimas de um terremoto
+				devastador. Eles perceberam que a falta de comunicação e coordenação dificultava o acesso da ajuda às
+				pessoas que mais precisavam. A partir dessa experiência, decidiram criar uma plataforma que permitisse
+				que voluntários e organizações se conectassem diretamente com as comunidades afetadas. </p>
 
-    <section
-      id="valores"
-      class="flex flex-col items-center justify-between mt-10 mb-28"
-    >
-      <div class="flex flex-col items-center lg:w-1/2 px-4">
-        <h3 class="text-md w-auto text-nowrap text-[#1FA4E4]">VALORES</h3>
+			<p class="text-lg md:text-start text-justify mb-4">O Nexus rapidamente se tornou um ponto de encontro para
+				pessoas de todo o mundo que queriam fazer a diferença. Voluntários de diferentes origens e habilidades
+				se inscreveram para oferecer sua ajuda, enquanto comunidades afetadas por desastres encontraram apoio e
+				recursos para se reconstruir.</p>
+			<p class="text-lg md:text-start text-justify mb-4">A plataforma cresceu rapidamente, expandindo sua atuação
+				para outros tipos de desastres e abrangendo uma área geográfica cada vez maior. Hoje, o Nexus é uma
+				comunidade global de mais de 1000 voluntários e 27 organizações parceiras, que juntos têm ajudado a
+				reconstruir comunidades em mais de 10 países.</p>
+			<p class="text-lg md:text-start text-justify mb-4">A história do Nexus é uma história de esperança,
+				solidariedade e impacto. É a história de pessoas comuns que se uniram para fazer a diferença, mostrando
+				que mesmo diante da adversidade, é possível construir um mundo melhor.</p>
+		</div>
 
-        <h2 class="md:text-5xl text-4xl text-center font-bold my-6">
-          Uma grande equipe com um objetivo muito maior
-        </h2>
+	</section>
 
-        <div class="flex lg:flex-row flex-col gap-8 mt-10">
-          <!-- Valor 1 -->
-          <div class="flex gap-4">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="100"
-              height="40"
-              viewBox="0 0 54 54"
-              fill="none"
-            >
-              <rect width="54" height="54" rx="12" fill="#1FA4E4" />
-            </svg>
-            <div>
-              <h3 class="text-lg font-bold mb-2">Solidariedade</h3>
-              <p>
-                No Nexus, acreditamos que a solidariedade é a base de uma sociedade mais justa e igualitária
-              </p>
-            </div>
-          </div>
+	<section id="valores" class="flex flex-col items-center justify-between mt-10 mb-28">
+		<div class="flex flex-col items-center lg:w-1/2 px-4">
+			<h3 class="text-md w-auto text-nowrap text-[#1FA4E4]">VALORES</h3>
 
-          <!-- Valor 2 -->
-          <div class="flex gap-4">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="100"
-              height="40"
-              viewBox="0 0 54 54"
-              fill="none"
-            >
-              <rect width="54" height="54" rx="12" fill="#1FA4E4" />
-            </svg>
-            <div>
-              <h3 class="text-lg font-bold mb-2">Esperança</h3>
-              <p>
-                Procuramos oferecer esperança aos que mais precisam, mostrando que é possível superar desafios
-              </p>
-            </div>
-          </div>
+			<h2 class="md:text-5xl text-4xl text-center font-bold my-6">
+				Uma grande equipe com um objetivo muito maior
+			</h2>
 
-          <!-- Valor 3 -->
-          <div class="flex gap-4">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="100"
-              height="40"
-              viewBox="0 0 54 54"
-              fill="none"
-            >
-              <rect width="54" height="54" rx="12" fill="#1FA4E4" />
-            </svg>
-            <div>
-              <h3 class="text-lg font-bold mb-2">Empatia</h3>
-              <p>
-                A empatia é a chave para entender as necessidades das pessoas afetadas por desastres
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="flex lg:flex-row flex-col gap-8 mt-12">
-          <!-- Valor 1 -->
-          <div class="flex gap-4">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="100"
-              height="40"
-              viewBox="0 0 54 54"
-              fill="none"
-            >
-              <rect width="54" height="54" rx="12" fill="#1FA4E4" />
-            </svg>
-            <div>
-              <h3 class="text-lg font-bold mb-2">Resiliência</h3>
-              <p>
-                No Nexus, celebramos a força e a determinação das pessoas que enfrentam situações difíceis
-              </p>
-            </div>
-          </div>
+			<div class="flex lg:flex-row flex-col gap-8 mt-10">
+				<!-- Valor 1 -->
+				<div class="flex gap-4">
+					<svg xmlns="http://www.w3.org/2000/svg" width="100" height="40" viewBox="0 0 54 54" fill="none">
+						<rect width="54" height="54" rx="12" fill="#1FA4E4" />
+					</svg>
+					<div>
+						<h3 class="text-lg font-bold mb-2">Solidariedade</h3>
+						<p>
+							No Nexus, acreditamos que a solidariedade é a base de uma sociedade mais justa e igualitária
+						</p>
+					</div>
+				</div>
 
-          <!-- Valor 2 -->
-          <div class="flex gap-4">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="100"
-              height="40"
-              viewBox="0 0 54 54"
-              fill="none"
-            >
-              <rect width="54" height="54" rx="12" fill="#1FA4E4" />
-            </svg>
-            <div>
-              <h3 class="text-lg font-bold mb-2">Cooperação</h3>
-              <p>
-                A cooperação é fundamental para alcançarmos resultados significativos
-              </p>
-            </div>
-          </div>
+				<!-- Valor 2 -->
+				<div class="flex gap-4">
+					<svg xmlns="http://www.w3.org/2000/svg" width="100" height="40" viewBox="0 0 54 54" fill="none">
+						<rect width="54" height="54" rx="12" fill="#1FA4E4" />
+					</svg>
+					<div>
+						<h3 class="text-lg font-bold mb-2">Esperança</h3>
+						<p>
+							Procuramos oferecer esperança aos que mais precisam, mostrando que é possível superar
+							desafios
+						</p>
+					</div>
+				</div>
 
-          <!-- Valor 3 -->
-          <div class="flex gap-4">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="100"
-              height="40"
-              viewBox="0 0 54 54"
-              fill="none"
-            >
-              <rect width="54" height="54" rx="12" fill="#1FA4E4" />
-            </svg>
-            <div>
-              <h3 class="text-lg font-bold mb-2">Inovação</h3>
-              <p>
-                Buscamos por novas tecnologias para atender às necessidades das comunidades afetadas
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    
+				<!-- Valor 3 -->
+				<div class="flex gap-4">
+					<svg xmlns="http://www.w3.org/2000/svg" width="100" height="40" viewBox="0 0 54 54" fill="none">
+						<rect width="54" height="54" rx="12" fill="#1FA4E4" />
+					</svg>
+					<div>
+						<h3 class="text-lg font-bold mb-2">Empatia</h3>
+						<p>
+							A empatia é a chave para entender as necessidades das pessoas afetadas por desastres
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="flex lg:flex-row flex-col gap-8 mt-12">
+				<!-- Valor 1 -->
+				<div class="flex gap-4">
+					<svg xmlns="http://www.w3.org/2000/svg" width="100" height="40" viewBox="0 0 54 54" fill="none">
+						<rect width="54" height="54" rx="12" fill="#1FA4E4" />
+					</svg>
+					<div>
+						<h3 class="text-lg font-bold mb-2">Resiliência</h3>
+						<p>
+							No Nexus, celebramos a força e a determinação das pessoas que enfrentam situações difíceis
+						</p>
+					</div>
+				</div>
+
+				<!-- Valor 2 -->
+				<div class="flex gap-4">
+					<svg xmlns="http://www.w3.org/2000/svg" width="100" height="40" viewBox="0 0 54 54" fill="none">
+						<rect width="54" height="54" rx="12" fill="#1FA4E4" />
+					</svg>
+					<div>
+						<h3 class="text-lg font-bold mb-2">Cooperação</h3>
+						<p>
+							A cooperação é fundamental para alcançarmos resultados significativos
+						</p>
+					</div>
+				</div>
+
+				<!-- Valor 3 -->
+				<div class="flex gap-4">
+					<svg xmlns="http://www.w3.org/2000/svg" width="100" height="40" viewBox="0 0 54 54" fill="none">
+						<rect width="54" height="54" rx="12" fill="#1FA4E4" />
+					</svg>
+					<div>
+						<h3 class="text-lg font-bold mb-2">Inovação</h3>
+						<p>
+							Buscamos por novas tecnologias para atender às necessidades das comunidades afetadas
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
 
-    <footer class="bg-black text-white py-12">
-      <div class="w-full lg:px-20 px-4 text-[#D4D4D4]">
-        <!-- Primeira Seção: Logo e Informações -->
-        <div class="grid md:grid-cols-3 gap-12">
-          <div class="text-center md:text-left">
-            <h1 class="text-4xl text-white font-bold mb-4">Nexus</h1>
-            <p class="text-md text-[#] mb-4">nexus@gmail.com</p>
-            <p class="text-md text-[#] mb-4">55+ 17 99132-3055</p>
-          </div>
-    
-          <!-- Segunda Seção: Links Rápidos -->
-          <div class="text-center md:text-left">
-            <h3 class="text-2xl text-white font-bold mb-4">Acesso rápido</h3>
-            <ul class="space-y-2">
-              <li><a href="/src/index.html" class="hover:text-[#1FA4E4]">Home</a></li>
-              <li><a href="/src/pages/sobre.html" class="hover:text-[#1FA4E4]">Sobre</a></li>
-              <li><a href="/src/pages/mural.html" class="hover:text-[#1FA4E4]">Mural de Pedidos</a></li>
-              <li><a href="#mapa" class="hover:text-[#1FA4E4]">Mapa</a></li>
-              <li><a href="#contato" class="hover:text-[#1FA4E4]">Contato</a></li>
-            </ul>
-          </div>
 
-          <!-- Quarta Seção: Newsletter -->
-        <div class="text-left">
-          <h3 class="text-2xl font-semibold mb-4 text-white">Inscreva-se para novidades</h3>
-          <form action="#" method="POST" class="flex">
-            <input type="email" class="border-2 border-[#D4D4D4] ps-2 bg-black w-full text-nowrap text-white rounded-l-md" placeholder="Seu e-mail" required>
-            <button type="submit" class="bg-white text-nowrap text-black p-3 rounded-r-md hover:bg-[#D4D4D4] transition duration-300">
-              Inscrever-se
-            </button>
-          </form>
-        </div>
-    
-          
-          </div>
-        </div>
-    
-      </div>
-    
-      <div class="w-full mt-8 text-center lg:px-20">
-        <div class="border-t-2 border-[#D4D4D4] w-full"></div>
-        
-        <div class="flex justify-between mt-4 items-center">
-        <div class="flex gap-3 px-4">
-        <a href="#" class="w-12 h-12 bg-white rounded-full flex items-center justify-center hover:bg-gray-200">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 text-black">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v12h4V14h3l1-4h-4V7a1 1 0 0 1 1-1h3V2z"/>
-          </svg>
-        </a>
-      
-        <!-- Ícone de Twitter -->
-        <a href="#" class="w-12 h-12 bg-white rounded-full flex items-center justify-center hover:bg-gray-200">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 text-black">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M23 3a10.91 10.91 0 0 1-3.142.86A5.507 5.507 0 0 0 22.5 1.57a10.945 10.945 0 0 1-3.49 1.332A5.502 5.502 0 0 0 16.62 5a5.522 5.522 0 0 0-.103.73A15.585 15.585 0 0 1 1.671 2.65a5.505 5.505 0 0 0 1.708 7.347 5.477 5.477 0 0 1-2.48-.686v.069a5.507 5.507 0 0 0 4.415 5.381A5.506 5.506 0 0 1 2 13.33a5.486 5.486 0 0 0 4.767 3.539c-3.58 2.8-7.928 2.658-11.438.745A15.592 15.592 0 0 0 8 19.2C13.77 19.2 17.5 12 17.5 5.5c0-.079-.004-.157-.01-.235.01-.04.01-.08.01-.12 0-1.184-.324-2.258-.875-3.18z"/>
-          </svg>
-        </a>
-      
-        <!-- Ícone de Instagram -->
-        <a href="#" class="w-12 h-12 bg-white rounded-full flex items-center justify-center hover:bg-gray-200">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 text-black">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2.16c3.182 0 3.56 0 4.8.07 1.15.07 2.18.4 3.03 1.08.86.68 1.52 1.64 1.88 2.75.57 1.7.57 3.73.57 7.07 0 3.34 0 5.37-.57 7.07-.36 1.11-1.02 2.07-1.88 2.75-.85.68-1.88 1.01-3.03 1.08-1.24.07-1.6.07-4.8.07s-3.56 0-4.8-.07c-1.15-.07-2.18-.4-3.03-1.08-.86-.68-1.52-1.64-1.88-2.75-.57-1.7-.57-3.73-.57-7.07 0-3.34 0-5.37.57-7.07.36-1.11 1.02-2.07 1.88-2.75.85-.68 1.88-1.01 3.03-1.08 1.24-.07 1.6-.07 4.8-.07zm0 1.6c-3.08 0-3.44 0-4.64.07-1.09.07-2.03.34-2.8.87-.77.53-1.4 1.3-1.86 2.26-.44 1.07-.75 2.27-.75 4.12s.31 3.05.75 4.12c.46.96 1.09 1.73 1.86 2.26.77.53 1.71.8 2.8.87 1.2.07 1.56.07 4.64.07s3.44 0 4.64-.07c1.09-.07 2.03-.34 2.8-.87.77-.53 1.4-1.3 1.86-2.26.44-1.07.75-2.27.75-4.12s-.31-3.05-.75-4.12c-.46-.96-1.09-1.73-1.86-2.26-.77-.53-1.71-.8-2.8-.87-1.2-.07-1.56-.07-4.64-.07zm0 6.96a2.52 2.52 0 1 1 0 5.04 2.52 2.52 0 0 1 0-5.04z"/>
-          </svg>
-        </a>
-      </div>
+	<footer class="bg-black text-white py-12">
+		<div class="w-full lg:px-20 px-4 text-[#D4D4D4]">
+			<!-- Primeira Seção: Logo e Informações -->
+			<div class="grid md:grid-cols-3 gap-12">
+				<div class="text-center md:text-left">
+					<h1 class="text-4xl text-white font-bold mb-4">Nexus</h1>
+					<p class="text-md text-[#] mb-4">nexus@gmail.com</p>
+					<p class="text-md text-[#] mb-4">55+ 17 99132-3055</p>
+				</div>
 
-        <p class="text-sm text-right text-gray-400 mt-4">© 2024 Nexus. Todos os direitos reservados.</p>
-      </div>
+				<!-- Segunda Seção: Links Rápidos -->
+				<div class="text-center md:text-left">
+					<h3 class="text-2xl text-white font-bold mb-4">Acesso rápido</h3>
+					<ul class="space-y-2">
+						<li><a href="/src/index.html" class="hover:text-[#1FA4E4]">Home</a></li>
+						<li><a href="/src/pages/sobre.html" class="hover:text-[#1FA4E4]">Sobre</a></li>
+						<li><a href="/src/pages/mural.html" class="hover:text-[#1FA4E4]">Mural de Pedidos</a></li>
+						<li><a href="#mapa" class="hover:text-[#1FA4E4]">Mapa</a></li>
+						<li><a href="#contato" class="hover:text-[#1FA4E4]">Contato</a></li>
+					</ul>
+				</div>
 
-        
-      </div>
+				<!-- Quarta Seção: Newsletter -->
+				<div class="text-left">
+					<h3 class="text-2xl font-semibold mb-4 text-white">Inscreva-se para novidades</h3>
+					<form action="#" method="POST" class="flex">
+						<input type="email"
+							class="border-2 border-[#D4D4D4] ps-2 bg-black w-full text-nowrap text-white rounded-l-md"
+							placeholder="Seu e-mail" required>
+						<button type="submit"
+							class="bg-white text-nowrap text-black p-3 rounded-r-md hover:bg-[#D4D4D4] transition duration-300">
+							Inscrever-se
+						</button>
+					</form>
+				</div>
 
-      
-    </footer>
-    
 
-    <script src="../scripts/main.js"></script>
-    <script src="../scripts/swipe.js"></script>
-  </body>
+			</div>
+		</div>
+
+		</div>
+
+		<div class="w-full mt-8 text-center lg:px-20">
+			<div class="border-t-2 border-[#D4D4D4] w-full"></div>
+
+			<div class="flex justify-between mt-4 items-center">
+				<div class="flex gap-3 px-4">
+					<a href="#"
+						class="w-12 h-12 bg-white rounded-full flex items-center justify-center hover:bg-gray-200">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+							class="w-6 h-6 text-black">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+								d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v12h4V14h3l1-4h-4V7a1 1 0 0 1 1-1h3V2z" />
+						</svg>
+					</a>
+
+					<!-- Ícone de Twitter -->
+					<a href="#"
+						class="w-12 h-12 bg-white rounded-full flex items-center justify-center hover:bg-gray-200">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+							class="w-6 h-6 text-black">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+								d="M23 3a10.91 10.91 0 0 1-3.142.86A5.507 5.507 0 0 0 22.5 1.57a10.945 10.945 0 0 1-3.49 1.332A5.502 5.502 0 0 0 16.62 5a5.522 5.522 0 0 0-.103.73A15.585 15.585 0 0 1 1.671 2.65a5.505 5.505 0 0 0 1.708 7.347 5.477 5.477 0 0 1-2.48-.686v.069a5.507 5.507 0 0 0 4.415 5.381A5.506 5.506 0 0 1 2 13.33a5.486 5.486 0 0 0 4.767 3.539c-3.58 2.8-7.928 2.658-11.438.745A15.592 15.592 0 0 0 8 19.2C13.77 19.2 17.5 12 17.5 5.5c0-.079-.004-.157-.01-.235.01-.04.01-.08.01-.12 0-1.184-.324-2.258-.875-3.18z" />
+						</svg>
+					</a>
+
+					<!-- Ícone de Instagram -->
+					<a href="#"
+						class="w-12 h-12 bg-white rounded-full flex items-center justify-center hover:bg-gray-200">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+							class="w-6 h-6 text-black">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+								d="M12 2.16c3.182 0 3.56 0 4.8.07 1.15.07 2.18.4 3.03 1.08.86.68 1.52 1.64 1.88 2.75.57 1.7.57 3.73.57 7.07 0 3.34 0 5.37-.57 7.07-.36 1.11-1.02 2.07-1.88 2.75-.85.68-1.88 1.01-3.03 1.08-1.24.07-1.6.07-4.8.07s-3.56 0-4.8-.07c-1.15-.07-2.18-.4-3.03-1.08-.86-.68-1.52-1.64-1.88-2.75-.57-1.7-.57-3.73-.57-7.07 0-3.34 0-5.37.57-7.07.36-1.11 1.02-2.07 1.88-2.75.85-.68 1.88-1.01 3.03-1.08 1.24-.07 1.6-.07 4.8-.07zm0 1.6c-3.08 0-3.44 0-4.64.07-1.09.07-2.03.34-2.8.87-.77.53-1.4 1.3-1.86 2.26-.44 1.07-.75 2.27-.75 4.12s.31 3.05.75 4.12c.46.96 1.09 1.73 1.86 2.26.77.53 1.71.8 2.8.87 1.2.07 1.56.07 4.64.07s3.44 0 4.64-.07c1.09-.07 2.03-.34 2.8-.87.77-.53 1.4-1.3 1.86-2.26.44-1.07.75-2.27.75-4.12s-.31-3.05-.75-4.12c-.46-.96-1.09-1.73-1.86-2.26-.77-.53-1.71-.8-2.8-.87-1.2-.07-1.56-.07-4.64-.07zm0 6.96a2.52 2.52 0 1 1 0 5.04 2.52 2.52 0 0 1 0-5.04z" />
+						</svg>
+					</a>
+				</div>
+
+				<p class="text-sm text-right text-gray-400 mt-4">© 2024 Nexus. Todos os direitos reservados.</p>
+			</div>
+
+
+		</div>
+
+
+	</footer>
+
+
+	<script src="../scripts/main.js"></script>
+	<script src="../scripts/swipe.js"></script>
+</body>
+
 </html>
