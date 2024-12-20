@@ -19,10 +19,11 @@
 </head>
 
 <body>
-	<nav class="flex items-center justify-between flex-wrap bg-white p-4 lg:px-20">
+	<nav class="flex items-center justify-between flex-wrap bg-white p-6 px-20">
 		<div class="flex items-center lg:w-auto w-1/2 flex-shrink-0 text-white mr-6">
-			<img src="../assets/images/Nexus.svg" alt="Nexus Logo" />
+			<img class="h-5" src="../assets/images/Nexus.svg" alt="Nexus Logo" />
 		</div>
+
 		<div class="block lg:hidden">
 			<button id="menu-button"
 				class="h-full flex items-center px-3 py-2 border rounded text-teal-500 border-teal-500 hover:text-teal-700 hover:border-teal-700">
@@ -32,21 +33,23 @@
 				</svg>
 			</button>
 		</div>
-		<div class="hidden lg:flex lg:items-center lg:space-x-4">
-			<a href="/src/index.html" class="text-[#1E1E1E] hover:text-[#607D8B]">Home</a>
-			<a href="/src/pages/sobre.html" class="text-[#1E1E1E] hover:text-[#607D8B]">Sobre</a>
-			<a href="" class="text-[#1E1E1E] hover:text-[#607D8B]">Mural de pedidos</a>
-			<a href="#mapa" class="text-[#1E1E1E] hover:text-[#607D8B]">Mapa</a>
+		
+		<div class="hidden lg:flex lg:items-center lg:space-x-10">
+			<a href="../index.html" class="text-[#1E1E1E] hover:text-[#1FA4E4]">Home</a>
+			<a href="sobre.html" class="text-[#1E1E1E] hover:text-[#1FA4E4]">Sobre</a>
+			<a href="mural.html" class="text-[#1E1E1E] hover:text-[#1FA4E4]">Mural de pedidos</a>
+			<a href="#" class="text-[#1E1E1E] hover:text-[#1FA4E4]">Mapa</a>
 		</div>
+
 		<div class="flex space-x-4 my-auto lg:block hidden">
 			<!-- Botão branco com texto azul -->
-			<button class="bg-white text-blue-500 font-bold py-2 px-4 rounded border border-[#006BB1] hover:bg-blue-50">
-				<a href="/src/pages/cadastro.html">Criar conta</a>
-
+			<button class="bg-white text-[#1FA4E4] font-bold py-2 px-7 rounded border border-[#1FA4E4] hover:bg-blue-50">
+				<a href="pages/cadastro.html">Criar conta</a>
 			</button>
+
 			<!-- Botão azul com texto branco -->
-			<button class="bg-[#1FA4E4] text-white font-bold py-2 px-4 rounded hover:bg-[#006BB1]">
-				<a href="/src/pages/login.html">Entrar</a>
+			<button class="bg-[#1FA4E4] text-white font-bold py-2 px-7 rounded hover:bg-[#006BB1]">
+				<a href="pages/login.html">Entrar</a>
 			</button>
 		</div>
 	</nav>
@@ -55,8 +58,8 @@
 	<div id="menu-modal" class="fixed inset-0 flex justify-start bg-black bg-opacity-50 hidden z-50">
 		<div class="bg-white w-64 h-full p-6 shadow-lg transform -translate-x-full transition-transform duration-300"
 			id="modal-content">
-			<div class="flex justify-between items-center mb-4">
-				<h2 class="text-lg font-bold">Menu</h2>
+			<div class="flex justify-between items-center mb-6">
+				<h2 class="text-xl font-bold">Menu</h2>
 				<button id="close-menu" class="text-gray-500 hover:text-gray-700">
 					<svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
 						stroke="currentColor">
@@ -65,31 +68,31 @@
 					</svg>
 				</button>
 			</div>
-			<div class="flex flex-col space-y-4">
-				<a href="/src/index.html" class="text-[#1E1E1E] hover:text-[#607D8B]">Home</a>
-				<a href="/src/pages/sobre.html" class="text-[#1E1E1E] hover:text-[#607D8B]">Sobre</a>
-				<a href="/src/pages/mural.html" class="text-[#1E1E1E] hover:text-[#607D8B]">Mural de pedidos</a>
-				<a href="#mapa" class="text-[#1E1E1E] hover:text-[#607D8B]">Mapa</a>
 
-				<div class="flex space-x-4 my-auto lg:block">
+			<div class="flex flex-col space-y-5">
+				<div class="flex space-x-4 mb-2 my-auto lg:block">
 					<!-- Botão branco com texto azul -->
-					<button
-						class="bg-white text-blue-500 font-bold py-2 px-2 rounded border border-[#006BB1] hover:bg-blue-50">
+					<button class="bg-white text-[#1FA4E4] font-semibold py-2 px-3 rounded border border-[#1FA4E4] hover:bg-blue-50">
 						<a href="/src/pages/cadastro.html">
 							Criar conta
 						</a>
 					</button>
+
 					<!-- Botão azul com texto branco -->
-					<button class="bg-[#1FA4E4] text-white font-bold py-2 px-2 rounded hover:bg-[#006BB1]">
+					<button class="bg-[#1FA4E4] text-white font-semibold py-2 px-3 rounded hover:bg-[#006BB1]">
 						<a href="/src/pages/login.html">
 							Entrar
 						</a>
 					</button>
 				</div>
+
+				<a href="index.html" class="text-[#1E1E1E] hover:text-[#1FA4E4]">Home</a>
+				<a href="pages/sobre.html" class="text-[#1E1E1E] hover:text-[#1FA4E4]">Sobre</a>
+				<a href="pages/mural.html" class="text-[#1E1E1E] hover:text-[#1FA4E4]">Mural de pedidos</a>
+				<a href="#mapa" class="text-[#1E1E1E] hover:text-[#1FA4E4]">Mapa</a>
 			</div>
 		</div>
 	</div>
-
 
 	<h2 class="md:text-5xl text-4xl font-bold lg:px-20 px-4 my-10">
 		Pedidos abertos
