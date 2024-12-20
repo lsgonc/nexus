@@ -3,7 +3,7 @@
 **Desenvolvedores:**  
 - Lucas Sciarra Gonçalves - 811948
 - Enzo Youji Murayama - 813606
-- Gabriel Zago - 
+- Gabriel Zago - 811640
 
 ---
 
